@@ -1,0 +1,27 @@
+Auteurs :
+- Maxime CLEMENT
+- Salla DIAGNE
+
+Dossiers :
+	- bin : exécutables
+	- include : fichiers d'entête
+	- lib : fichiers objet
+	- src : fichiers source
+
+Fichiers d'entête et fichiers source :
+	- display_stack.c : fichier qui affiche les valeurs des registres ESP et EBP sous différentes configurations
+	- try.h / try.c : bibliothèque de changement de contexte
+	- try_mul.c : fichier qui teste la bibliothèque try
+
+Compilation :
+	- se placer à la racine du projet et exécuter la commande make pour générer les fichiers objets dans le dossier lib et les exécutables dans le dossier bin
+
+Exécution :
+	./display_stack
+	Cette commande permet d'afficher les valeurs des registres de pile (ESP et EBP) lors d'appel à une fonction récursive nommée printer
+	printer(10) : l'appel à la fonction avec un paramètre autre que le cas de base permet d'effectuer des appels imbriqués
+	printer(0) appelé plusieurs fois, permet de simuler des appels successifs (0 est le cas de base)
+
+	./try_mul
+	Cette commande permet à l'utilisateur d'écrire sur l'entrée standard une série de nombres qui seront multipliés entre eux. Le résultat sera affiché sur la sortie
+	standard. La bibliothèque de changement de contexte(try/throw) permet d'afficher directement le résultat de la multiplication quand 0 est entré par l'utilisateur.

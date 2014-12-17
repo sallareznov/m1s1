@@ -1,0 +1,47 @@
+\subsubsection{ValiderPanier}
+	\underline{But} : Un client souhaite valider son panier afin de pouvoir payer et rentrer chez lui avec ses courses.\\
+	\underline{Acteur principal} : Un client.\\
+	\underline{Date de création} : 21/10/2014.\\
+	\underline{Responsable} : Groupe ASMA\\
+	\underline{Version} : 1.0\\
+	\underline{Déclenchement} : Après avoir flashé/choisi les articles qu'il désire, le client choisit de valider son panier à l'aide de l'application fDrive.\\
+	\underline{Pré-condition} : Le client est authentifié sur l'application fDrive.\\
+	\underline{Séquence nominale} :
+		\begin{enumerate}
+			\item Le système récupère la liste des articles sélectionnés par le client.
+			\item Le système vérifie les disponibilités de ces articles.
+			\item Le système demande la confirmation au client avant de valider.
+			\item Le système affecte la commande à une caisse.
+			\item Le système affiche le numéro de caisse et le numéro de commande associé à la commande du client.
+			\item Le système propose l'auto-guidage vers cette caisse.
+			\item Fin du cas d'utilisation.
+		\end{enumerate}
+	\underline{Post-condition} : Le système est en attente d'un paiement pour cette commande.\\
+	\underline{Scénario alternatif} :\\
+		2a. [Un article n'est plus disponible.]
+			\begin{enumerate}[label=2a.\arabic* ]
+				\item Le système prévient le client.
+				\item Le système propose des articles similaires disponibles.
+				\item Le client choisit un articles de remplacement ou valide sans cet article.
+				\item Le système met à jour la commande.
+				\item Renvoie en 2.
+			\end{enumerate}
+		2b. [La quantité disponible est insuffisante.]
+			\begin{enumerate}[label=2b.\arabic* ]
+	       		\item Le système prévient le client.
+				\item Le système propose la quantité maximale disponible.
+				\item Le client choisit une quantité ou valide sans cet article..
+				\item Le système met à jour la commande.
+				\item Renvoie en 2.
+			\end{enumerate} 
+	\underline{Scenario d’exception} :\\
+		1a [La commande est vide.]
+			\begin{enumerate}[label=1a.\arabic* ]
+				\item Le système prévient l'utilisateur.
+				\item Le système met fin à la session.
+			\end{enumerate}
+		3a [Le client ne confirme pas sa commande.]
+			\begin{enumerate}[label=3a.\arabic* ]
+				\item Le système prévient l'utilisateur.
+				\item Le système met fin à la session.
+			\end{enumerate}

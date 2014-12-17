@@ -1,0 +1,34 @@
+\subsubsection{Paiement}
+	\underline{But} : Le client désire payer.\\
+	\underline{Acteur principal} : Le client.\\
+	\underline{Date de création} : 04/11/2014\\
+	\underline{Responsable} : Groupe ASMA\\
+	\underline{Version} : 1.0\\
+	\underline{Déclenchement} : Le client se trouve à la caisse indiquée par l'application lors de la validation de son panier.\\
+	\underline{Pré-condition} : Le client doit être authentifié.\\
+	\underline{Séquence nominale} :
+		\begin{enumerate}
+			\item Le client sélectionne le moyen de paiement désiré.
+			\item Le système affiche les instructions à suivre afin de payer.
+			\item Le système vérifie le paiement du client.
+			\item Le système donne au client sa commande préparé par les robots de stocks.
+			\item Fin du cas d'utilisation.
+		\end{enumerate}
+	\underline{Post-condition} : Le panier du client est payé.\\
+	\underline{Scénario alternatif} :\\
+		2a [Le client change de moyen de paiement.]
+	 		\begin{enumerate}[label=2a.\arabic* ]
+	 			\item Le système prévient l'utilisateur.
+	 			\item Retour en 1.
+ 			\end{enumerate}
+		3a [Le client n'a pas bien suivi les instructions de paiement.]
+ 			\begin{enumerate}[label=3a.\arabic* ]
+ 				\item Le système prévient l'utilisateur.
+ 				\item Retour en 2.
+ 			\end{enumerate}
+	 \underline{Scénario d'exception} :\\
+	 	1a [Le client annule son paiement]
+	 		\begin{enumerate}[label=1a.\arabic* ]
+	 			\item Le système prévient l'utilisateur.
+	 			\item Retour en 1.
+	 		\end{enumerate}

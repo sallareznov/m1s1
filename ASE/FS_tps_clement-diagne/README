@@ -1,0 +1,13 @@
+Auteurs :
+- Maxime CLEMENT
+- Salla DIAGNE
+
+Instructions :
+	- se placer dans le répertoire tp6_clement-diagne et exécuter la commande make pour générer les fichiers objets et les exécutables des programmes mkvol, dvol et rmvol dans bin/
+	- se placer dans le dossier bin/ et taper les commandes :
+		if_create [vol_number] -> cree une inode et renvoi le inumber
+		if_delete [vol_number] [inumber] -> supprimer l'inode de numero [inumber] et renvoi OK ou KO		
+		if_dump [vol_number] [inumber] -> affiche le contenu du fichier d'inode de numero [inumber]
+		if_copy [vol_number] [inumber] -> ecrit le contenu de l'entrée standard dans l'inode de numero [inumber]
+
+

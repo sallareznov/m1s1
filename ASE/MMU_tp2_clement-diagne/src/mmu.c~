@@ -1,0 +1,19 @@
+#include "../include/mmu.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+extern void *virtual_memory;
+
+int vpage_of_vaddr(unsigned int vaddr) {
+	return ((vaddr - (unsigned int) virtual_memory + 1) >> 12) & 0xFFF;
+}
+
+int ppage_of_vaddr(int process, unsigned int vaddr) {
+	unsigned int vpage;
+
+	vpage = vpage_of_vaddr(vaddr);
+	if (vpage < 127)
+		return (vpage + 127 * process + 1);
+  else
+    return -1;
+}

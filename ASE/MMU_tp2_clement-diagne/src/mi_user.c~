@@ -1,0 +1,46 @@
+#include "../include/mi_user.h"
+#include "../include/mi_syscall.h"
+#include "../include/mmu.h"
+#include "hardware.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define N_MATRIX 500
+
+extern void *virtual_memory;
+
+typedef unsigned int matrix[N_MATRIX][N_MATRIX];
+
+
+void init_matrix(matrix *m) {
+	int i, j;
+
+	for (j = 0 ; j < N_MATRIX ; j++) {
+		for (i = 0 ; i < N_MATRIX ; i++) {
+			(*m)[i][j] = (i + j) % 128;
+		}
+	}
+}
+
+void mult_matrix(int a[N_MATRIX][N_MATRIX], int b[N_MATRIX][N_MATRIX], int result[N_MATRIX][N_MATRIX]) {
+	int i, j, k;
+
+	for (i = 0 ; i < N_MATRIX ; i++) {
+		for (j = 0 ; j < N_MATRIX ; j++) {
+			for (k = 0 ; k < N_MATRIX ; k++) {
+				result[i][j] += a[i][k] + b[k][j];
+			}
+		}
+	}
+}
+
+void run() {
+	matrix* m1= (matrix*)virtual_memory;
+	matrix* m2= (matrix*)virtual_memory+1;
+	
+	init_matrix(m1);
+	init_matrix(m2);
+
+
+	printf("DONE !\n");
+}

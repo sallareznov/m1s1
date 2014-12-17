@@ -1,0 +1,36 @@
+Auteurs :
+- Salla DIAGNE
+- Anis TELLO
+
+Listing des dossiers et fichiers du répertoire :
+	- bin : répertoire des fichiers .class
+	- img : répertoire des images de test
+	- src : répertoire des fichiers source
+	- test : répertoire des fichiers de tests unitaires
+	- clean.sh : script qui permet de nettoyer le projet après test
+	- compile.sh : script qui permet de compiler les fichiers source du projet
+	- display.sh : script qui permet de visualiser les images initiales et finales
+	- execute.sh : script qui permet de tester le projet en exécutant le programme sur différentes images
+	- tp3-umlcd.png : diagramme UML du projet
+
+Instructions :
+	- exécuter ./compile.sh
+		pour compiler les fichiers source
+	- exécuter ./execute.sh k
+	 	pour générer les fichiers de type image-fin.pgm correspondant
+	aux fichiers image-deb.pgm du répertoire img (lance le programme avec k en argument)
+	- exécuter ./display.sh
+		pour afficher les images initiales et celles obtenues en mode
+	diaporama (5 secondes par image)
+	- exécuter ./clean.sh
+		pour supprimer les fichiers finaux du répertoire img et les
+	fichiers .class du dossier bin
+	--- OU ---
+	- se placer dans le répertoire src et exécuter la commande :
+	javac palette/*.java -d ../bin pour générer les fichiers .class dans le dossier bin
+	- se placer dans le répertoire bin et exécuter la commande :
+	java palette.Main pour connaître le mode d'utilisation du programme
+
+Réponses aux questions :
+	- Question 5 : L'écart entre deux pixels de niveaux de gris g1 et g2 étant (g1 - g2)², il est préférable d'avoir
+	des couleurs voisines pour obtenir un petit écart et ainsi minimiser la distance finale.

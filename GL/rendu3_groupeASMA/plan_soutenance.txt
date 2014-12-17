@@ -1,0 +1,8 @@
+Plan Présentation
+- Vos différences / hypermarchés actuels
+- 2-3 scénarios concrets (avec maquette)
+- Le diagramme de UC général puis focus sur ceux liés aux scénarios concrets
+- Remettre maquette
+	-> diagrammes de séquences
+	-> diagrammes de classes
+- Remerciements à l'enseignant

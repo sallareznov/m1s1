@@ -1,0 +1,35 @@
+\subsubsection{DemanderAssistanceRobot}
+	\underline{But} : Un client demande l'assistance d'un robot pour une certaine tâche.\\
+	\underline{Acteur principal} : Le client.\\
+	\underline{Date de création} : 04/11/2014\\
+	\underline{Responsable} : Groupe ASMA\\
+	\underline{Version} : 1.0\\
+	\underline{Déclenchement} : Le client sélectionne l'option "demander assistance robot" dans son application.\\
+	\underline{Pré-condition} : Le client est authentifié sur l'application fDrive.\\
+	\underline{Séquence nominale} :\\
+		\begin{enumerate}
+			\item Le client sélectionne le type d'assistance qu'il désire.
+			\item Le système vérifie le type d'assistance.
+			\item Le système vérifie la disponibilité des robots pour ce type d'assistance.
+			\item Le système envoie un robot au client.
+			\item Fin du cas d'utilisation.
+		\end{enumerate}
+	\underline{Post-condition} : Un robot est maintenant disponible pour utilisation.\\
+	\underline{Scénarion alternatif} :\\
+		2a [Le type d'assistance demandé n'est pas possible pour ce client.]
+	 		\begin{enumerate}[label=2a.\arabic* ]
+	 			\item Le système prévient l'utilisateur.
+	 			\item Retour en 1.
+	 		\end{enumerate}
+		Note : Par exemple, un client ne peut pas demander une assistance robot pour charger ses courses dans son véhicule s'il n'a pas encore payé.\\
+	\underline{Scénario d'exception} :\\
+		1a [Le client annule sa demande d'assistance.]
+			\begin{enumerate}[label=1a.\arabic* ]
+	 			\item Le système prévient l'utilisateur.
+	 			\item Fin de la session.
+	 		\end{enumerate}
+	 	3a [Aucun robot n'est disponible.]
+	 		\begin{enumerate}[label=3a.\arabic* ]
+	 			\item Le système prévient l'utilisateur.
+	 			\item Fin de la session.
+	 		\end{enumerate}

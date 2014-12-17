@@ -1,0 +1,30 @@
+\subsubsection{AjouterPanier}
+	\underline{But} : Le client souhaite ajouter un article à sa commande courante à l'aide de l'application fDrive.\\
+	\underline{Acteur principal} : Un client\\
+	\underline{Date de création} : 21/10/2014\\
+	\underline{Responsable} : Groupe ASMA\\
+	\underline{Version} : 1.0\\
+	\underline{Déclenchement} : Le client flashe/sélectionne un article dans l'application fDrive.\\
+	\underline{Séquence nominale} :
+		\begin{enumerate}
+			\item Le système récupère la commande courante du client.
+			\item Le système affiche un formulaire pour choisir la quantité désirée.
+			\item Le client sélectionne la quantité désirée.
+			\item Le système valide la quantité.
+			\item Le système affiche l'ajout à la commande.
+			\item Le système met à jour la commande courante du client.
+			\item Fin du cas d'utilisation.
+		\end{enumerate}
+	\underline{Post-condition} : Un nouvel article est ajouté dans la commande courante du client.\\
+	\underline{Scénario alternatif} :\\
+		4a [La quantité est nulle.]
+			\begin{enumerate}[label=4a.\arabic* ]
+				\item Le système prévient l'utilisateur.
+				\item Renvoie en 2.
+			\end{enumerate}
+	\underline{Scénario d'exception} :\\
+		5a [Le client annule son ajout.]
+			\begin{enumerate}[label=5a.\arabic* ]
+				\item Le système prévient le client.
+				\item Le système met fin à la session.
+			\end{enumerate}

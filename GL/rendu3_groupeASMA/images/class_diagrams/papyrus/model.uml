@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_taWyME38EeSCpO1g5nrMgQ" name="model">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_rvIxEE39EeSCpO1g5nrMgQ" name="ConsulterHistoriqueDAchat"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_x9mecE39EeSCpO1g5nrMgQ" name="RechercherArticles">
+    <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_v3uk0U4CEeSCpO1g5nrMgQ" name=""/>
+    <include xmi:type="uml:Include" xmi:id="_Sl_lkE4BEeSCpO1g5nrMgQ" addition="_O6pVME4BEeSCpO1g5nrMgQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_05HNUE39EeSCpO1g5nrMgQ" name="Guidage">
+    <extend xmi:type="uml:Extend" xmi:id="_Tl-UgE4EEeSCpO1g5nrMgQ" extendedCase="_x9mecE39EeSCpO1g5nrMgQ" extensionLocation="_v3uk0U4CEeSCpO1g5nrMgQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_5PvPUE39EeSCpO1g5nrMgQ" name="ValiderPanier"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_7liCAE39EeSCpO1g5nrMgQ" name="Payer">
+    <include xmi:type="uml:Include" xmi:id="_9qCJAE4AEeSCpO1g5nrMgQ" addition="_5PvPUE39EeSCpO1g5nrMgQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_aSlTQE4AEeSCpO1g5nrMgQ" name="ModifierPanier"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_VApqIE4BEeSCpO1g5nrMgQ" name="" memberEnd="_VApqIU4BEeSCpO1g5nrMgQ _VApqJE4BEeSCpO1g5nrMgQ">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_VApqIU4BEeSCpO1g5nrMgQ" name="modifierpanier" type="_aSlTQE4AEeSCpO1g5nrMgQ" association="_VApqIE4BEeSCpO1g5nrMgQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VApqIk4BEeSCpO1g5nrMgQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VApqI04BEeSCpO1g5nrMgQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_VApqJE4BEeSCpO1g5nrMgQ" name="application" type="_O6pVME4BEeSCpO1g5nrMgQ" association="_VApqIE4BEeSCpO1g5nrMgQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VApqJU4BEeSCpO1g5nrMgQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VApqJk4BEeSCpO1g5nrMgQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_VkZQYE4BEeSCpO1g5nrMgQ" name="" memberEnd="_VkZQYU4BEeSCpO1g5nrMgQ _VkZQZE4BEeSCpO1g5nrMgQ">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_VkZQYU4BEeSCpO1g5nrMgQ" name="validerpanier" type="_5PvPUE39EeSCpO1g5nrMgQ" association="_VkZQYE4BEeSCpO1g5nrMgQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VkZQYk4BEeSCpO1g5nrMgQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VkZQY04BEeSCpO1g5nrMgQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_VkZQZE4BEeSCpO1g5nrMgQ" name="application" type="_O6pVME4BEeSCpO1g5nrMgQ" association="_VkZQYE4BEeSCpO1g5nrMgQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VkZQZU4BEeSCpO1g5nrMgQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VkZQZk4BEeSCpO1g5nrMgQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_WZkk4E4BEeSCpO1g5nrMgQ" name="" memberEnd="_WZkk4U4BEeSCpO1g5nrMgQ _WZkk5E4BEeSCpO1g5nrMgQ">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_WZkk4U4BEeSCpO1g5nrMgQ" name="consulterhistoriquedachat" type="_rvIxEE39EeSCpO1g5nrMgQ" association="_WZkk4E4BEeSCpO1g5nrMgQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WZkk4k4BEeSCpO1g5nrMgQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WZkk404BEeSCpO1g5nrMgQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_WZkk5E4BEeSCpO1g5nrMgQ" name="application" type="_O6pVME4BEeSCpO1g5nrMgQ" association="_WZkk4E4BEeSCpO1g5nrMgQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WZkk5U4BEeSCpO1g5nrMgQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WZkk5k4BEeSCpO1g5nrMgQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_O6pVME4BEeSCpO1g5nrMgQ" name="Application"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_rtpxEE4CEeSCpO1g5nrMgQ" name="AjouterPanier">
+    <extend xmi:type="uml:Extend" xmi:id="_v3cQ8E4CEeSCpO1g5nrMgQ" extendedCase="_x9mecE39EeSCpO1g5nrMgQ" extensionLocation="_v3uk0U4CEeSCpO1g5nrMgQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_0HNAgE4DEeSCpO1g5nrMgQ" name="ParQRCode">
+    <generalization xmi:type="uml:Generalization" xmi:id="_ARAq8E4EEeSCpO1g5nrMgQ" general="_x9mecE39EeSCpO1g5nrMgQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_0_f6cE4DEeSCpO1g5nrMgQ" name="ParCodeBarre">
+    <generalization xmi:type="uml:Generalization" xmi:id="_An0BYE4EEeSCpO1g5nrMgQ" general="_x9mecE39EeSCpO1g5nrMgQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_1-ddEE4DEeSCpO1g5nrMgQ" name="ParPhoto">
+    <include xmi:type="uml:Include" xmi:id="_5vSYMFOGEeSeRrAKzts7Kg" addition="_x9mecE39EeSCpO1g5nrMgQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_3bqa4E4DEeSCpO1g5nrMgQ" name="ParNom">
+    <generalization xmi:type="uml:Generalization" xmi:id="_CH3e4E4EEeSCpO1g5nrMgQ" general="_x9mecE39EeSCpO1g5nrMgQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_4E6zQE4DEeSCpO1g5nrMgQ" name="ParCatégorie">
+    <generalization xmi:type="uml:Generalization" xmi:id="_BDNj8E4EEeSCpO1g5nrMgQ" general="_x9mecE39EeSCpO1g5nrMgQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_6ljkAE4DEeSCpO1g5nrMgQ" name="ParRéference">
+    <generalization xmi:type="uml:Generalization" xmi:id="_BWH44E4EEeSCpO1g5nrMgQ" general="_x9mecE39EeSCpO1g5nrMgQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_88b70E4DEeSCpO1g5nrMgQ" name="ParCritère">
+    <generalization xmi:type="uml:Generalization" xmi:id="_BzZqwE4EEeSCpO1g5nrMgQ" general="_x9mecE39EeSCpO1g5nrMgQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_mLmL0E4EEeSCpO1g5nrMgQ" name="ParCarteBancaire">
+    <generalization xmi:type="uml:Generalization" xmi:id="_HZkMkE4FEeSCpO1g5nrMgQ" general="_7liCAE39EeSCpO1g5nrMgQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_puAioE4EEeSCpO1g5nrMgQ" name="ParEspece">
+    <generalization xmi:type="uml:Generalization" xmi:id="_GQGDEE4FEeSCpO1g5nrMgQ" general="_7liCAE39EeSCpO1g5nrMgQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_qsEGUE4EEeSCpO1g5nrMgQ" name="ParSmartPhoneNFC">
+    <generalization xmi:type="uml:Generalization" xmi:id="_Go9PAE4FEeSCpO1g5nrMgQ" general="_7liCAE39EeSCpO1g5nrMgQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_rdLaME4EEeSCpO1g5nrMgQ" name="ParCheque">
+    <generalization xmi:type="uml:Generalization" xmi:id="_HAsZkE4FEeSCpO1g5nrMgQ" general="_7liCAE39EeSCpO1g5nrMgQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_JnjHEE4FEeSCpO1g5nrMgQ" name="SaisirCode4Chiffres">
+    <generalization xmi:type="uml:Generalization" xmi:id="_L5WxoE4FEeSCpO1g5nrMgQ" general="_mLmL0E4EEeSCpO1g5nrMgQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_MtXBcE4FEeSCpO1g5nrMgQ" name="ParInternet">
+    <generalization xmi:type="uml:Generalization" xmi:id="_VYpWkE4FEeSCpO1g5nrMgQ" general="_mLmL0E4EEeSCpO1g5nrMgQ"/>
+    <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_ta4AgE4FEeSCpO1g5nrMgQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_hCYZ0E4FEeSCpO1g5nrMgQ" name="ParCompteUtilisateur">
+    <generalization xmi:type="uml:Generalization" xmi:id="_hj2vME4FEeSCpO1g5nrMgQ" general="_7liCAE39EeSCpO1g5nrMgQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_rTdBAE4FEeSCpO1g5nrMgQ" name="EnregistrerInfoPaiement">
+    <extend xmi:type="uml:Extend" xmi:id="_tayg8E4FEeSCpO1g5nrMgQ" extendedCase="_MtXBcE4FEeSCpO1g5nrMgQ" extensionLocation="_ta4AgE4FEeSCpO1g5nrMgQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_-VUvcE4FEeSCpO1g5nrMgQ" name="RecupererCommande">
+    <include xmi:type="uml:Include" xmi:id="_AAuhUE4GEeSCpO1g5nrMgQ" addition="_7liCAE39EeSCpO1g5nrMgQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_DpTKgE4GEeSCpO1g5nrMgQ" name="LivraisonDomicile">
+    <generalization xmi:type="uml:Generalization" xmi:id="_IKQ0QE4GEeSCpO1g5nrMgQ" general="_-VUvcE4FEeSCpO1g5nrMgQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_EwBiAE4GEeSCpO1g5nrMgQ" name="ChargerVoiture">
+    <generalization xmi:type="uml:Generalization" xmi:id="_HkJPcE4GEeSCpO1g5nrMgQ" general="_-VUvcE4FEeSCpO1g5nrMgQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_GYG6IE4GEeSCpO1g5nrMgQ" name="Normal">
+    <generalization xmi:type="uml:Generalization" xmi:id="_HzkykE4GEeSCpO1g5nrMgQ" general="_-VUvcE4FEeSCpO1g5nrMgQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_QgFPsE4GEeSCpO1g5nrMgQ" name="Client"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_SFQdwE4GEeSCpO1g5nrMgQ" name="" memberEnd="_SFQdwU4GEeSCpO1g5nrMgQ _SFQdxE4GEeSCpO1g5nrMgQ">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_SFQdwU4GEeSCpO1g5nrMgQ" name="client" type="_QgFPsE4GEeSCpO1g5nrMgQ" association="_SFQdwE4GEeSCpO1g5nrMgQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SFQdwk4GEeSCpO1g5nrMgQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SFQdw04GEeSCpO1g5nrMgQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_SFQdxE4GEeSCpO1g5nrMgQ" name="application" type="_O6pVME4BEeSCpO1g5nrMgQ" association="_SFQdwE4GEeSCpO1g5nrMgQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SFQdxU4GEeSCpO1g5nrMgQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SFQdxk4GEeSCpO1g5nrMgQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_ug8bQE4GEeSCpO1g5nrMgQ" name="AssitanceRobot">
+    <include xmi:type="uml:Include" xmi:id="_xH9g0E4GEeSCpO1g5nrMgQ" addition="_O6pVME4BEeSCpO1g5nrMgQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_APA_gE4HEeSCpO1g5nrMgQ" name="ChargementDuCaddiePendantCourse">
+    <generalization xmi:type="uml:Generalization" xmi:id="_RNU6wE4HEeSCpO1g5nrMgQ" general="_ug8bQE4GEeSCpO1g5nrMgQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_PNmesE4HEeSCpO1g5nrMgQ" name="ChargerCommandeDansVoiture">
+    <generalization xmi:type="uml:Generalization" xmi:id="_RfawUE4HEeSCpO1g5nrMgQ" general="_ug8bQE4GEeSCpO1g5nrMgQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_Xzt_8E4HEeSCpO1g5nrMgQ" name="PreparationCommandeEnStock">
+    <generalization xmi:type="uml:Generalization" xmi:id="_ZKLckE4HEeSCpO1g5nrMgQ" general="_ug8bQE4GEeSCpO1g5nrMgQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_arTogE8BEeShoJdgfBSdLg" name="Client"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_bLsYwE8BEeShoJdgfBSdLg" name="Article"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_blyTwE8BEeShoJdgfBSdLg" name="Panier"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_b4oXQE8BEeShoJdgfBSdLg" name="Commande"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ebcSQE8BEeShoJdgfBSdLg" name="LigneArticle">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_vdznEE8BEeShoJdgfBSdLg" name="article" type="_bLsYwE8BEeShoJdgfBSdLg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vdznEU8BEeShoJdgfBSdLg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vdznEk8BEeShoJdgfBSdLg" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_mEHT0E8BEeShoJdgfBSdLg" name="MoyenPaiement"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_nOHo0E8BEeShoJdgfBSdLg" name="TabletteInteractive"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_pJaQ0E8BEeShoJdgfBSdLg" name="Douchette"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_wU3x808BEeShoJdgfBSdLg" memberEnd="_wU3x9E8BEeShoJdgfBSdLg _wU3x8E8BEeShoJdgfBSdLg">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_wU3x9E8BEeShoJdgfBSdLg" name="ligneArticle" type="_ebcSQE8BEeShoJdgfBSdLg" association="_wU3x808BEeShoJdgfBSdLg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wU3x9U8BEeShoJdgfBSdLg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wU3x9k8BEeShoJdgfBSdLg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_wU3x8E8BEeShoJdgfBSdLg" name="article" type="_bLsYwE8BEeShoJdgfBSdLg" aggregation="shared" association="_wU3x808BEeShoJdgfBSdLg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wU3x8U8BEeShoJdgfBSdLg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wU3x8k8BEeShoJdgfBSdLg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_7tU38E8BEeShoJdgfBSdLg" name="Caisse"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_1xwb8E8CEeShoJdgfBSdLg" name="PaiementADistance">
+    <generalization xmi:type="uml:Generalization" xmi:id="_MiYUEE8DEeShoJdgfBSdLg" general="_mEHT0E8BEeShoJdgfBSdLg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_2sBr0E8CEeShoJdgfBSdLg" name="PaiementSurPlace">
+    <generalization xmi:type="uml:Generalization" xmi:id="_M6ocAE8DEeShoJdgfBSdLg" general="_mEHT0E8BEeShoJdgfBSdLg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_BzV-gE8DEeShoJdgfBSdLg" name="PaiementCB16Chiffres">
+    <generalization xmi:type="uml:Generalization" xmi:id="_OoDAEE8DEeShoJdgfBSdLg" general="_1xwb8E8CEeShoJdgfBSdLg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_CF8KYE8DEeShoJdgfBSdLg" name="PaiementCheque">
+    <generalization xmi:type="uml:Generalization" xmi:id="_OWHikE8DEeShoJdgfBSdLg" general="_2sBr0E8CEeShoJdgfBSdLg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_CjFZYE8DEeShoJdgfBSdLg" name="PaiementCash">
+    <generalization xmi:type="uml:Generalization" xmi:id="_OAl-gE8DEeShoJdgfBSdLg" general="_2sBr0E8CEeShoJdgfBSdLg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_CzEWIE8DEeShoJdgfBSdLg" name="PaiementNFC">
+    <generalization xmi:type="uml:Generalization" xmi:id="_Nn38gE8DEeShoJdgfBSdLg" general="_2sBr0E8CEeShoJdgfBSdLg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_DBX34E8DEeShoJdgfBSdLg" name="PaiementCB4Chiffres">
+    <generalization xmi:type="uml:Generalization" xmi:id="_NR998E8DEeShoJdgfBSdLg" general="_2sBr0E8CEeShoJdgfBSdLg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_UxlKIE8DEeShoJdgfBSdLg" visibility="package" memberEnd="_UxlKIU8DEeShoJdgfBSdLg _UxkjEE8DEeShoJdgfBSdLg">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_UxlKIU8DEeShoJdgfBSdLg" name="paiement" type="_mEHT0E8BEeShoJdgfBSdLg" association="_UxlKIE8DEeShoJdgfBSdLg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UxlKIk8DEeShoJdgfBSdLg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UxlKI08DEeShoJdgfBSdLg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_UxkjEE8DEeShoJdgfBSdLg" name="commande" type="_b4oXQE8BEeShoJdgfBSdLg" association="_UxlKIE8DEeShoJdgfBSdLg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UxkjEU8DEeShoJdgfBSdLg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UxkjEk8DEeShoJdgfBSdLg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_YTSWUE8DEeShoJdgfBSdLg" name="CommandeEnLigne">
+    <generalization xmi:type="uml:Generalization" xmi:id="_dbPuoE8DEeShoJdgfBSdLg" general="_b4oXQE8BEeShoJdgfBSdLg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_aG1XkE8DEeShoJdgfBSdLg" name="CommandeSurPlace">
+    <generalization xmi:type="uml:Generalization" xmi:id="_dHByIE8DEeShoJdgfBSdLg" general="_b4oXQE8BEeShoJdgfBSdLg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_giOtsE8DEeShoJdgfBSdLg" memberEnd="_giOtsU8DEeShoJdgfBSdLg _giOGoE8DEeShoJdgfBSdLg">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_giOtsU8DEeShoJdgfBSdLg" name="panier" type="_blyTwE8BEeShoJdgfBSdLg" association="_giOtsE8DEeShoJdgfBSdLg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_giOtsk8DEeShoJdgfBSdLg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_giOts08DEeShoJdgfBSdLg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_giOGoE8DEeShoJdgfBSdLg" name="commande" type="_b4oXQE8BEeShoJdgfBSdLg" association="_giOtsE8DEeShoJdgfBSdLg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_giOGoU8DEeShoJdgfBSdLg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_giOGok8DEeShoJdgfBSdLg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_5jgZ008DEeShoJdgfBSdLg" memberEnd="_5jgZ1E8DEeShoJdgfBSdLg _5jgZ0E8DEeShoJdgfBSdLg">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_5jgZ1E8DEeShoJdgfBSdLg" name="ligneArticle" type="_ebcSQE8BEeShoJdgfBSdLg" aggregation="composite" association="_5jgZ008DEeShoJdgfBSdLg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5jgZ1U8DEeShoJdgfBSdLg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5jgZ1k8DEeShoJdgfBSdLg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_5jgZ0E8DEeShoJdgfBSdLg" name="commande" type="_b4oXQE8BEeShoJdgfBSdLg" association="_5jgZ008DEeShoJdgfBSdLg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5jgZ0U8DEeShoJdgfBSdLg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5jgZ0k8DEeShoJdgfBSdLg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Nd5EoE8EEeShoJdgfBSdLg" name="Transporteur"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_PnzXcE8EEeShoJdgfBSdLg" name="Livreur">
+    <generalization xmi:type="uml:Generalization" xmi:id="_WYtqkE8EEeShoJdgfBSdLg" general="_Nd5EoE8EEeShoJdgfBSdLg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Q3D_4E8EEeShoJdgfBSdLg" name="Robot">
+    <generalization xmi:type="uml:Generalization" xmi:id="_WD87gE8EEeShoJdgfBSdLg" general="_Nd5EoE8EEeShoJdgfBSdLg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_YfSVgE8EEeShoJdgfBSdLg" name="Livraison"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_a-5ykE8EEeShoJdgfBSdLg" memberEnd="_a-5ykU8EEeShoJdgfBSdLg _a-5LgE8EEeShoJdgfBSdLg">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_a-5ykU8EEeShoJdgfBSdLg" name="transporteur" type="_Nd5EoE8EEeShoJdgfBSdLg" association="_a-5ykE8EEeShoJdgfBSdLg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_a-5ykk8EEeShoJdgfBSdLg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_a-5yk08EEeShoJdgfBSdLg" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_a-5LgE8EEeShoJdgfBSdLg" name="transportArticle" type="_YfSVgE8EEeShoJdgfBSdLg" association="_a-5ykE8EEeShoJdgfBSdLg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_a-5LgU8EEeShoJdgfBSdLg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_a-5Lgk8EEeShoJdgfBSdLg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_rIdQEE8EEeShoJdgfBSdLg" name="LivraisonDomicile">
+    <generalization xmi:type="uml:Generalization" xmi:id="_v1cjoE8EEeShoJdgfBSdLg" general="_YfSVgE8EEeShoJdgfBSdLg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_sZGYkE8EEeShoJdgfBSdLg" name="LivraisonVoiture">
+    <generalization xmi:type="uml:Generalization" xmi:id="_vkwcQE8EEeShoJdgfBSdLg" general="_YfSVgE8EEeShoJdgfBSdLg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_JKQ2008FEeShoJdgfBSdLg" memberEnd="_JKQ21E8FEeShoJdgfBSdLg _JKQ20E8FEeShoJdgfBSdLg">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_JKQ21E8FEeShoJdgfBSdLg" name="caisse" type="_7tU38E8BEeShoJdgfBSdLg" association="_JKQ2008FEeShoJdgfBSdLg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JKQ21U8FEeShoJdgfBSdLg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JKQ21k8FEeShoJdgfBSdLg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_JKQ20E8FEeShoJdgfBSdLg" name="paiementSurPlace" type="_2sBr0E8CEeShoJdgfBSdLg" association="_JKQ2008FEeShoJdgfBSdLg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JKQ20U8FEeShoJdgfBSdLg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JKQ20k8FEeShoJdgfBSdLg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_VyCRQ1OHEeSeRrAKzts7Kg" memberEnd="_VyCRRFOHEeSeRrAKzts7Kg _VyCRQFOHEeSeRrAKzts7Kg" navigableOwnedEnd="_VyCRQFOHEeSeRrAKzts7Kg">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_VyCRRFOHEeSeRrAKzts7Kg" name="transportArticle" type="_YfSVgE8EEeShoJdgfBSdLg" association="_VyCRQ1OHEeSeRrAKzts7Kg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VyCRRVOHEeSeRrAKzts7Kg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VyCRRlOHEeSeRrAKzts7Kg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_VyCRQFOHEeSeRrAKzts7Kg" name="commande" type="_b4oXQE8BEeShoJdgfBSdLg" association="_VyCRQ1OHEeSeRrAKzts7Kg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VyCRQVOHEeSeRrAKzts7Kg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VyCRQlOHEeSeRrAKzts7Kg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_5su-A1OHEeSeRrAKzts7Kg" memberEnd="_5svlEFOHEeSeRrAKzts7Kg _5su-AFOHEeSeRrAKzts7Kg">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_5svlEFOHEeSeRrAKzts7Kg" name="client" type="_arTogE8BEeShoJdgfBSdLg" association="_5su-A1OHEeSeRrAKzts7Kg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5svlEVOHEeSeRrAKzts7Kg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5svlElOHEeSeRrAKzts7Kg" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_5su-AFOHEeSeRrAKzts7Kg" name="article" type="_bLsYwE8BEeShoJdgfBSdLg" association="_5su-A1OHEeSeRrAKzts7Kg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5su-AVOHEeSeRrAKzts7Kg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5su-AlOHEeSeRrAKzts7Kg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="__-7U0FOHEeSeRrAKzts7Kg" visibility="package" memberEnd="__-7U0VOHEeSeRrAKzts7Kg __-6twFOHEeSeRrAKzts7Kg">
+    <ownedEnd xmi:type="uml:Property" xmi:id="__-7U0VOHEeSeRrAKzts7Kg" name="tabletteInteractive" type="_nOHo0E8BEeShoJdgfBSdLg" association="__-7U0FOHEeSeRrAKzts7Kg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__-7U0lOHEeSeRrAKzts7Kg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__-7U01OHEeSeRrAKzts7Kg" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="__-6twFOHEeSeRrAKzts7Kg" name="client" type="_arTogE8BEeShoJdgfBSdLg" association="__-7U0FOHEeSeRrAKzts7Kg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__-6twVOHEeSeRrAKzts7Kg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__-6twlOHEeSeRrAKzts7Kg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_AXEIA1OIEeSeRrAKzts7Kg" memberEnd="_AXEIBFOIEeSeRrAKzts7Kg _AXEIAFOIEeSeRrAKzts7Kg">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_AXEIBFOIEeSeRrAKzts7Kg" name="douchette" type="_pJaQ0E8BEeShoJdgfBSdLg" association="_AXEIA1OIEeSeRrAKzts7Kg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AXEIBVOIEeSeRrAKzts7Kg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AXEIBlOIEeSeRrAKzts7Kg" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_AXEIAFOIEeSeRrAKzts7Kg" name="client" type="_arTogE8BEeShoJdgfBSdLg" association="_AXEIA1OIEeSeRrAKzts7Kg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AXEIAVOIEeSeRrAKzts7Kg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AXEIAlOIEeSeRrAKzts7Kg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_zGWykHPWEeSsbLtAIkfQ9Q" name="Interaction1" classifierBehavior="_Ia8xkHPXEeSsbLtAIkfQ9Q">
+    <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_Ia8xkHPXEeSsbLtAIkfQ9Q" name="StateMachine1">
+      <region xmi:type="uml:Region" xmi:id="_IoMjYHPXEeSsbLtAIkfQ9Q" name="Region1"/>
+    </ownedBehavior>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_Nh6EUHPXEeSsbLtAIkfQ9Q" name=":Client" coveredBy="_oLGJcHPXEeSsbLtAIkfQ9Q _ySiTgHPXEeSsbLtAIkfQ9Q _i4QhYHPYEeSsbLtAIkfQ9Q _3cwgMHPYEeSsbLtAIkfQ9Q _WkFIEHPaEeSsbLtAIkfQ9Q _fgCWcHPaEeSsbLtAIkfQ9Q _8dMz4HPbEeSsbLtAIkfQ9Q _AuLkEHPgEeSsbLtAIkfQ9Q _AuMLIHPgEeSsbLtAIkfQ9Q _OUOjAHPgEeSsbLtAIkfQ9Q _OUPxIHPgEeSsbLtAIkfQ9Q"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_Rf5j4HPXEeSsbLtAIkfQ9Q" name=":PaiementUI" coveredBy="_p0UxEHPXEeSsbLtAIkfQ9Q _ySiTgXPXEeSsbLtAIkfQ9Q _ETR8IHPYEeSsbLtAIkfQ9Q _ZSNNIHPYEeSsbLtAIkfQ9Q _i4P6UHPYEeSsbLtAIkfQ9Q _teXkcHPYEeSsbLtAIkfQ9Q _1GOGoHPYEeSsbLtAIkfQ9Q _1GNfkHPYEeSsbLtAIkfQ9Q _3cxHQHPYEeSsbLtAIkfQ9Q _BMVj4HPZEeSsbLtAIkfQ9Q _HDK0YHPZEeSsbLtAIkfQ9Q _ToGfIHPaEeSsbLtAIkfQ9Q _WkEhAHPaEeSsbLtAIkfQ9Q _a6ThcHPaEeSsbLtAIkfQ9Q _fgDkkHPaEeSsbLtAIkfQ9Q _kra2MHPaEeSsbLtAIkfQ9Q _m2EI0HPaEeSsbLtAIkfQ9Q _5esbYHPbEeSsbLtAIkfQ9Q _8dLlwHPbEeSsbLtAIkfQ9Q _AuLkEHPgEeSsbLtAIkfQ9Q _AuMLIHPgEeSsbLtAIkfQ9Q _OUOjAHPgEeSsbLtAIkfQ9Q _OUPxIHPgEeSsbLtAIkfQ9Q"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_Rzw7EHPXEeSsbLtAIkfQ9Q" name=" :PaiementCtrl" coveredBy="_rznvUHPXEeSsbLtAIkfQ9Q _ETTKQHPYEeSsbLtAIkfQ9Q _NBSOEHPYEeSsbLtAIkfQ9Q _T-sFEHPYEeSsbLtAIkfQ9Q _cLo4YHPYEeSsbLtAIkfQ9Q _-w-7wHPYEeSsbLtAIkfQ9Q _-w-UsHPYEeSsbLtAIkfQ9Q _BMWK8HPZEeSsbLtAIkfQ9Q _HDI_MHPZEeSsbLtAIkfQ9Q _r8Om0HPZEeSsbLtAIkfQ9Q _RJ0e0HPaEeSsbLtAIkfQ9Q _ToF4EHPaEeSsbLtAIkfQ9Q _ijPowHPaEeSsbLtAIkfQ9Q _krbdQHPaEeSsbLtAIkfQ9Q _9gaZ0HPaEeSsbLtAIkfQ9Q _s8R5IHPaEeSsbLtAIkfQ9Q _qGErkHPbEeSsbLtAIkfQ9Q _1djhMHPbEeSsbLtAIkfQ9Q _5erNQHPbEeSsbLtAIkfQ9Q _AuLkEHPgEeSsbLtAIkfQ9Q _AuMLIHPgEeSsbLtAIkfQ9Q _OUOjAHPgEeSsbLtAIkfQ9Q _OUPxIHPgEeSsbLtAIkfQ9Q"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_SOvm4HPXEeSsbLtAIkfQ9Q" name=":BanqueCtrl" coveredBy="_qv2d0HPaEeSsbLtAIkfQ9Q _qv12wHPaEeSsbLtAIkfQ9Q _s8THQHPaEeSsbLtAIkfQ9Q _AuLkEHPgEeSsbLtAIkfQ9Q _AuMLIHPgEeSsbLtAIkfQ9Q _OUOjAHPgEeSsbLtAIkfQ9Q _OUPxIHPgEeSsbLtAIkfQ9Q"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_Sda8EHPXEeSsbLtAIkfQ9Q" name=":Model" coveredBy="_uPUVsHPXEeSsbLtAIkfQ9Q _uPTuoHPXEeSsbLtAIkfQ9Q _NBS1IHPYEeSsbLtAIkfQ9Q _T-q28HPYEeSsbLtAIkfQ9Q _orZvQHPZEeSsbLtAIkfQ9Q _r8PN4HPZEeSsbLtAIkfQ9Q _IWzxEHPaEeSsbLtAIkfQ9Q _LRD7sHPaEeSsbLtAIkfQ9Q _RJz3wHPaEeSsbLtAIkfQ9Q _oKRGMHPbEeSsbLtAIkfQ9Q _qGGgwHPbEeSsbLtAIkfQ9Q _1diTEHPbEeSsbLtAIkfQ9Q _AuLkEHPgEeSsbLtAIkfQ9Q _AuMLIHPgEeSsbLtAIkfQ9Q"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="__35rEHPZEeSsbLtAIkfQ9Q" name="MoyenPaiement" coveredBy="_F3GNYHPaEeSsbLtAIkfQ9Q _IW0YIHPaEeSsbLtAIkfQ9Q _LRDUoHPaEeSsbLtAIkfQ9Q _AuLkEHPgEeSsbLtAIkfQ9Q _AuMLIHPgEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ySiTgHPXEeSsbLtAIkfQ9Q" name="MessageSend" covered="_Nh6EUHPXEeSsbLtAIkfQ9Q" message="_ySf3QHPXEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_oLGJcHPXEeSsbLtAIkfQ9Q" name="ActionExecSpec" covered="_Nh6EUHPXEeSsbLtAIkfQ9Q" finish="_8dMz4HPbEeSsbLtAIkfQ9Q" start="_ySiTgHPXEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ySiTgXPXEeSsbLtAIkfQ9Q" name="MessageRecv" covered="_Rf5j4HPXEeSsbLtAIkfQ9Q" message="_ySf3QHPXEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ETTKQHPYEeSsbLtAIkfQ9Q" name="MessageRecv0" covered="_Rzw7EHPXEeSsbLtAIkfQ9Q" message="_ETRVEHPYEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_uPTuoHPXEeSsbLtAIkfQ9Q" name="ActionExecSpec0" covered="_Sda8EHPXEeSsbLtAIkfQ9Q" finish="_uPUVsHPXEeSsbLtAIkfQ9Q" start="_NBS1IHPYEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_T-q28HPYEeSsbLtAIkfQ9Q" name="MessageSend2" covered="_Sda8EHPXEeSsbLtAIkfQ9Q" message="_T-qP4HPYEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_uPUVsHPXEeSsbLtAIkfQ9Q" name="ActionExecSpec0Finish" covered="_Sda8EHPXEeSsbLtAIkfQ9Q" execution="_uPTuoHPXEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ZSNNIHPYEeSsbLtAIkfQ9Q" name="Message0Recv" covered="_Rf5j4HPXEeSsbLtAIkfQ9Q" message="_ZSMmEHPYEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_cLo4YHPYEeSsbLtAIkfQ9Q" name="BehaviorExecSpec0Finish" covered="_Rzw7EHPXEeSsbLtAIkfQ9Q" execution="_rznvUHPXEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_i4P6UHPYEeSsbLtAIkfQ9Q" name="Message1Send" covered="_Rf5j4HPXEeSsbLtAIkfQ9Q" message="_i4OsMHPYEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_i4QhYHPYEeSsbLtAIkfQ9Q" name="Message1Recv" covered="_Nh6EUHPXEeSsbLtAIkfQ9Q" message="_i4OsMHPYEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_teXkcHPYEeSsbLtAIkfQ9Q" name="BehaviorExecSpecFinish" covered="_Rf5j4HPXEeSsbLtAIkfQ9Q" execution="_p0UxEHPXEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_3cwgMHPYEeSsbLtAIkfQ9Q" name="Message1Send0" covered="_Nh6EUHPXEeSsbLtAIkfQ9Q" message="_3cvSEHPYEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_HDK0YHPZEeSsbLtAIkfQ9Q" name="ActionExecSpec1Start" covered="_Rf5j4HPXEeSsbLtAIkfQ9Q" execution="_1GNfkHPYEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_1GNfkHPYEeSsbLtAIkfQ9Q" name="ActionExecSpec1" covered="_Rf5j4HPXEeSsbLtAIkfQ9Q" finish="_1GOGoHPYEeSsbLtAIkfQ9Q" start="_HDK0YHPZEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_HDI_MHPZEeSsbLtAIkfQ9Q" name="ActionExecSpec2Start" covered="_Rzw7EHPXEeSsbLtAIkfQ9Q" execution="_-w-UsHPYEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BMVj4HPZEeSsbLtAIkfQ9Q" name="Message1Send1" covered="_Rf5j4HPXEeSsbLtAIkfQ9Q" message="_BMU80HPZEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_-w-UsHPYEeSsbLtAIkfQ9Q" name="ActionExecSpec2" covered="_Rzw7EHPXEeSsbLtAIkfQ9Q" finish="_-w-7wHPYEeSsbLtAIkfQ9Q" start="_HDI_MHPZEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BMWK8HPZEeSsbLtAIkfQ9Q" name="Message1Recv1" covered="_Rzw7EHPXEeSsbLtAIkfQ9Q" message="_BMU80HPZEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_r8Om0HPZEeSsbLtAIkfQ9Q" name="Message2Send" covered="_Rzw7EHPXEeSsbLtAIkfQ9Q" message="_r8NYsHPZEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_r8PN4HPZEeSsbLtAIkfQ9Q" name="Message2Recv" covered="_Sda8EHPXEeSsbLtAIkfQ9Q" message="_r8NYsHPZEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_IWzxEHPaEeSsbLtAIkfQ9Q" name="Message2Send0" covered="_Sda8EHPXEeSsbLtAIkfQ9Q" message="_IWyi8HPaEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_F3GNYHPaEeSsbLtAIkfQ9Q" name="BehaviorExecSpec1" covered="__35rEHPZEeSsbLtAIkfQ9Q" finish="_LRDUoHPaEeSsbLtAIkfQ9Q" start="_IW0YIHPaEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_IW0YIHPaEeSsbLtAIkfQ9Q" name="Message2Recv0" covered="__35rEHPZEeSsbLtAIkfQ9Q" message="_IWyi8HPaEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LRDUoHPaEeSsbLtAIkfQ9Q" name="Message2Send1" covered="__35rEHPZEeSsbLtAIkfQ9Q" message="_LRCGgHPaEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_RJz3wHPaEeSsbLtAIkfQ9Q" name="Message3Send" covered="_Sda8EHPXEeSsbLtAIkfQ9Q" message="_RJypoHPaEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_RJ0e0HPaEeSsbLtAIkfQ9Q" name="Message3Recv" covered="_Rzw7EHPXEeSsbLtAIkfQ9Q" message="_RJypoHPaEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LRD7sHPaEeSsbLtAIkfQ9Q" name="Message2Recv1" covered="_Sda8EHPXEeSsbLtAIkfQ9Q" message="_LRCGgHPaEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ToF4EHPaEeSsbLtAIkfQ9Q" name="Message4Send" covered="_Rzw7EHPXEeSsbLtAIkfQ9Q" message="_ToEp8HPaEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ToGfIHPaEeSsbLtAIkfQ9Q" name="Message4Recv" covered="_Rf5j4HPXEeSsbLtAIkfQ9Q" message="_ToEp8HPaEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_-w-7wHPYEeSsbLtAIkfQ9Q" name="ActionExecSpec2Finish" covered="_Rzw7EHPXEeSsbLtAIkfQ9Q" execution="_-w-UsHPYEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_1GOGoHPYEeSsbLtAIkfQ9Q" name="ActionExecSpec1Finish" covered="_Rf5j4HPXEeSsbLtAIkfQ9Q" execution="_1GNfkHPYEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fgCWcHPaEeSsbLtAIkfQ9Q" name="Message5Send0" covered="_Nh6EUHPXEeSsbLtAIkfQ9Q" message="_fgBIUHPaEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fgDkkHPaEeSsbLtAIkfQ9Q" name="Message5Recv" covered="_Rf5j4HPXEeSsbLtAIkfQ9Q" message="_fgBIUHPaEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_ijPowHPaEeSsbLtAIkfQ9Q" name="ActionExecSpec5" covered="_Rzw7EHPXEeSsbLtAIkfQ9Q" finish="_5erNQHPbEeSsbLtAIkfQ9Q" start="_krbdQHPaEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_9gaZ0HPaEeSsbLtAIkfQ9Q" name="Message5Recv" covered="_Rzw7EHPXEeSsbLtAIkfQ9Q" message="_m2C6sHPaEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_s8R5IHPaEeSsbLtAIkfQ9Q" name="Message5Send3" covered="_Rzw7EHPXEeSsbLtAIkfQ9Q" message="_s8QrAHPaEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_qv12wHPaEeSsbLtAIkfQ9Q" name="ActionExecSpec6" covered="_SOvm4HPXEeSsbLtAIkfQ9Q" finish="_qv2d0HPaEeSsbLtAIkfQ9Q" start="_s8THQHPaEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_s8THQHPaEeSsbLtAIkfQ9Q" name="Message5Recv" covered="_SOvm4HPXEeSsbLtAIkfQ9Q" message="_s8QrAHPaEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_qv2d0HPaEeSsbLtAIkfQ9Q" name="ActionExecSpec6Finish" covered="_SOvm4HPXEeSsbLtAIkfQ9Q" execution="_qv12wHPaEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_qGErkHPbEeSsbLtAIkfQ9Q" name="Message5Send4" covered="_Rzw7EHPXEeSsbLtAIkfQ9Q" message="_qGDdcHPbEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_oKRGMHPbEeSsbLtAIkfQ9Q" name="ActionExecSpec7" covered="_Sda8EHPXEeSsbLtAIkfQ9Q" finish="_1diTEHPbEeSsbLtAIkfQ9Q" start="_qGGgwHPbEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_1djhMHPbEeSsbLtAIkfQ9Q" name="Message5Recv" covered="_Rzw7EHPXEeSsbLtAIkfQ9Q" message="_1dhsAHPbEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_5erNQHPbEeSsbLtAIkfQ9Q" name="Message6Send" covered="_Rzw7EHPXEeSsbLtAIkfQ9Q" message="_5epYEHPbEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_5esbYHPbEeSsbLtAIkfQ9Q" name="Message6Recv" covered="_Rf5j4HPXEeSsbLtAIkfQ9Q" message="_5epYEHPbEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_8dLlwHPbEeSsbLtAIkfQ9Q" name="Message7Send" covered="_Rf5j4HPXEeSsbLtAIkfQ9Q" message="_8dJwkHPbEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_8dMz4HPbEeSsbLtAIkfQ9Q" name="Message7Recv" covered="_Nh6EUHPXEeSsbLtAIkfQ9Q" message="_8dJwkHPbEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_kra2MHPaEeSsbLtAIkfQ9Q" name="Message5Send1" covered="_Rf5j4HPXEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_krbdQHPaEeSsbLtAIkfQ9Q" name="Message5Recv" covered="_Rzw7EHPXEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_p0UxEHPXEeSsbLtAIkfQ9Q" name="BehaviorExecSpec" covered="_Rf5j4HPXEeSsbLtAIkfQ9Q" finish="_teXkcHPYEeSsbLtAIkfQ9Q" start="_ySiTgXPXEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ETR8IHPYEeSsbLtAIkfQ9Q" name="MessageSend0" covered="_Rf5j4HPXEeSsbLtAIkfQ9Q" message="_ETRVEHPYEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_rznvUHPXEeSsbLtAIkfQ9Q" name="BehaviorExecSpec0" covered="_Rzw7EHPXEeSsbLtAIkfQ9Q" finish="_cLo4YHPYEeSsbLtAIkfQ9Q" start="_ETTKQHPYEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_NBSOEHPYEeSsbLtAIkfQ9Q" name="MessageSend1" covered="_Rzw7EHPXEeSsbLtAIkfQ9Q" message="_NBQ_8HPYEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_NBS1IHPYEeSsbLtAIkfQ9Q" name="MessageRecv1" covered="_Sda8EHPXEeSsbLtAIkfQ9Q" message="_NBQ_8HPYEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_T-sFEHPYEeSsbLtAIkfQ9Q" name="MessageRecv2" covered="_Rzw7EHPXEeSsbLtAIkfQ9Q" message="_ZSMmEHPYEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:CombinedFragment" xmi:id="_AuLkEHPgEeSsbLtAIkfQ9Q" name="CombinedFragment" covered="_Rzw7EHPXEeSsbLtAIkfQ9Q _Sda8EHPXEeSsbLtAIkfQ9Q _SOvm4HPXEeSsbLtAIkfQ9Q __35rEHPZEeSsbLtAIkfQ9Q _Nh6EUHPXEeSsbLtAIkfQ9Q _Rf5j4HPXEeSsbLtAIkfQ9Q" interactionOperator="loop">
+      <operand xmi:type="uml:InteractionOperand" xmi:id="_AuMLIHPgEeSsbLtAIkfQ9Q" name="InteractionOperand" covered="_Rzw7EHPXEeSsbLtAIkfQ9Q _Sda8EHPXEeSsbLtAIkfQ9Q _SOvm4HPXEeSsbLtAIkfQ9Q __35rEHPZEeSsbLtAIkfQ9Q _Nh6EUHPXEeSsbLtAIkfQ9Q _Rf5j4HPXEeSsbLtAIkfQ9Q">
+        <guard xmi:type="uml:InteractionConstraint" xmi:id="_AuMLIXPgEeSsbLtAIkfQ9Q">
+          <specification xmi:type="uml:LiteralString" xmi:id="_k5SEUHPgEeSsbLtAIkfQ9Q" value="Changer Moyen Paiement"/>
+        </guard>
+      </operand>
+    </fragment>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_3cxHQHPYEeSsbLtAIkfQ9Q" name="Message1Recv0" covered="_Rf5j4HPXEeSsbLtAIkfQ9Q" message="_3cvSEHPYEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_orZvQHPZEeSsbLtAIkfQ9Q" name="ActionExecSpec3" covered="_Sda8EHPXEeSsbLtAIkfQ9Q" finish="_RJz3wHPaEeSsbLtAIkfQ9Q" start="_r8PN4HPZEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:CombinedFragment" xmi:id="_OUOjAHPgEeSsbLtAIkfQ9Q" name="CombinedFragment0" covered="_Rzw7EHPXEeSsbLtAIkfQ9Q _SOvm4HPXEeSsbLtAIkfQ9Q _Nh6EUHPXEeSsbLtAIkfQ9Q _Rf5j4HPXEeSsbLtAIkfQ9Q" interactionOperator="loop">
+      <operand xmi:type="uml:InteractionOperand" xmi:id="_OUPxIHPgEeSsbLtAIkfQ9Q" name="InteractionOperand" covered="_Rzw7EHPXEeSsbLtAIkfQ9Q _SOvm4HPXEeSsbLtAIkfQ9Q _Nh6EUHPXEeSsbLtAIkfQ9Q _Rf5j4HPXEeSsbLtAIkfQ9Q">
+        <guard xmi:type="uml:InteractionConstraint" xmi:id="_OUQYMHPgEeSsbLtAIkfQ9Q">
+          <specification xmi:type="uml:LiteralString" xmi:id="_iBVm0HPgEeSsbLtAIkfQ9Q" value="Champs non valides"/>
+        </guard>
+      </operand>
+    </fragment>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_WkEhAHPaEeSsbLtAIkfQ9Q" name="Message5Send" covered="_Rf5j4HPXEeSsbLtAIkfQ9Q" message="_WkD58HPaEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_WkFIEHPaEeSsbLtAIkfQ9Q" name="Message5Recv" covered="_Nh6EUHPXEeSsbLtAIkfQ9Q" message="_WkD58HPaEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_a6ThcHPaEeSsbLtAIkfQ9Q" name="ActionExecSpec4" covered="_Rf5j4HPXEeSsbLtAIkfQ9Q" finish="_8dLlwHPbEeSsbLtAIkfQ9Q" start="_fgDkkHPaEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_m2EI0HPaEeSsbLtAIkfQ9Q" name="Message5Send2" covered="_Rf5j4HPXEeSsbLtAIkfQ9Q" message="_m2C6sHPaEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_qGGgwHPbEeSsbLtAIkfQ9Q" name="Message5Recv" covered="_Sda8EHPXEeSsbLtAIkfQ9Q" message="_qGDdcHPbEeSsbLtAIkfQ9Q"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_1diTEHPbEeSsbLtAIkfQ9Q" name="Message5Send" covered="_Sda8EHPXEeSsbLtAIkfQ9Q" message="_1dhsAHPbEeSsbLtAIkfQ9Q"/>
+    <message xmi:type="uml:Message" xmi:id="_ySf3QHPXEeSsbLtAIkfQ9Q" name="1:choisirMoyenPaiement()" receiveEvent="_ySiTgXPXEeSsbLtAIkfQ9Q" sendEvent="_ySiTgHPXEeSsbLtAIkfQ9Q"/>
+    <message xmi:type="uml:Message" xmi:id="_ETRVEHPYEeSsbLtAIkfQ9Q" name="2:getMoyensContacts()" receiveEvent="_ETTKQHPYEeSsbLtAIkfQ9Q" sendEvent="_ETR8IHPYEeSsbLtAIkfQ9Q"/>
+    <message xmi:type="uml:Message" xmi:id="_NBQ_8HPYEeSsbLtAIkfQ9Q" name="3:getMoyensPaiements()" receiveEvent="_NBS1IHPYEeSsbLtAIkfQ9Q" sendEvent="_NBSOEHPYEeSsbLtAIkfQ9Q"/>
+    <message xmi:type="uml:Message" xmi:id="_T-qP4HPYEeSsbLtAIkfQ9Q" name="4:liste moyens paiements" messageSort="reply" receiveEvent="_T-sFEHPYEeSsbLtAIkfQ9Q" sendEvent="_T-q28HPYEeSsbLtAIkfQ9Q"/>
+    <message xmi:type="uml:Message" xmi:id="_ZSMmEHPYEeSsbLtAIkfQ9Q" name="5:liste moyens paiements" messageSort="reply" receiveEvent="_ZSNNIHPYEeSsbLtAIkfQ9Q" sendEvent="_T-sFEHPYEeSsbLtAIkfQ9Q"/>
+    <message xmi:type="uml:Message" xmi:id="_i4OsMHPYEeSsbLtAIkfQ9Q" name="6:afficherFormulaireSelection" messageSort="reply" receiveEvent="_i4QhYHPYEeSsbLtAIkfQ9Q" sendEvent="_i4P6UHPYEeSsbLtAIkfQ9Q"/>
+    <message xmi:type="uml:Message" xmi:id="_3cvSEHPYEeSsbLtAIkfQ9Q" name="7:selectionne()" receiveEvent="_3cxHQHPYEeSsbLtAIkfQ9Q" sendEvent="_3cwgMHPYEeSsbLtAIkfQ9Q"/>
+    <message xmi:type="uml:Message" xmi:id="_BMU80HPZEeSsbLtAIkfQ9Q" name="8:getInstanceMoyenPaiement()" receiveEvent="_BMWK8HPZEeSsbLtAIkfQ9Q" sendEvent="_BMVj4HPZEeSsbLtAIkfQ9Q"/>
+    <message xmi:type="uml:Message" xmi:id="_r8NYsHPZEeSsbLtAIkfQ9Q" name="9:getInstanceMoyenPaiement()" receiveEvent="_r8PN4HPZEeSsbLtAIkfQ9Q" sendEvent="_r8Om0HPZEeSsbLtAIkfQ9Q"/>
+    <message xmi:type="uml:Message" xmi:id="_IWyi8HPaEeSsbLtAIkfQ9Q" name="10:creerMoyenPaiement()" receiveEvent="_IW0YIHPaEeSsbLtAIkfQ9Q" sendEvent="_IWzxEHPaEeSsbLtAIkfQ9Q"/>
+    <message xmi:type="uml:Message" xmi:id="_LRCGgHPaEeSsbLtAIkfQ9Q" name="11:Instance" messageSort="reply" receiveEvent="_LRD7sHPaEeSsbLtAIkfQ9Q" sendEvent="_LRDUoHPaEeSsbLtAIkfQ9Q"/>
+    <message xmi:type="uml:Message" xmi:id="_RJypoHPaEeSsbLtAIkfQ9Q" name="12:Instance" messageSort="reply" receiveEvent="_RJ0e0HPaEeSsbLtAIkfQ9Q" sendEvent="_RJz3wHPaEeSsbLtAIkfQ9Q"/>
+    <message xmi:type="uml:Message" xmi:id="_ToEp8HPaEeSsbLtAIkfQ9Q" name="13:Instance" messageSort="reply" receiveEvent="_ToGfIHPaEeSsbLtAIkfQ9Q" sendEvent="_ToF4EHPaEeSsbLtAIkfQ9Q"/>
+    <message xmi:type="uml:Message" xmi:id="_WkD58HPaEeSsbLtAIkfQ9Q" name="14:montrerChampsARemplir()" messageSort="reply" receiveEvent="_WkFIEHPaEeSsbLtAIkfQ9Q" sendEvent="_WkEhAHPaEeSsbLtAIkfQ9Q"/>
+    <message xmi:type="uml:Message" xmi:id="_fgBIUHPaEeSsbLtAIkfQ9Q" name="15:entrerChamps" receiveEvent="_fgDkkHPaEeSsbLtAIkfQ9Q" sendEvent="_fgCWcHPaEeSsbLtAIkfQ9Q"/>
+    <message xmi:type="uml:Message" xmi:id="_m2C6sHPaEeSsbLtAIkfQ9Q" name="16:validerChamps()" receiveEvent="_9gaZ0HPaEeSsbLtAIkfQ9Q" sendEvent="_m2EI0HPaEeSsbLtAIkfQ9Q"/>
+    <message xmi:type="uml:Message" xmi:id="_s8QrAHPaEeSsbLtAIkfQ9Q" name="17:verifierInfosBanquaire()" receiveEvent="_s8THQHPaEeSsbLtAIkfQ9Q" sendEvent="_s8R5IHPaEeSsbLtAIkfQ9Q"/>
+    <message xmi:type="uml:Message" xmi:id="_qGDdcHPbEeSsbLtAIkfQ9Q" name="18:effectuerPaiement()" receiveEvent="_qGGgwHPbEeSsbLtAIkfQ9Q" sendEvent="_qGErkHPbEeSsbLtAIkfQ9Q"/>
+    <message xmi:type="uml:Message" xmi:id="_1dhsAHPbEeSsbLtAIkfQ9Q" name="19:OK" messageSort="reply" receiveEvent="_1djhMHPbEeSsbLtAIkfQ9Q" sendEvent="_1diTEHPbEeSsbLtAIkfQ9Q"/>
+    <message xmi:type="uml:Message" xmi:id="_5epYEHPbEeSsbLtAIkfQ9Q" name="20:OK" messageSort="reply" receiveEvent="_5esbYHPbEeSsbLtAIkfQ9Q" sendEvent="_5erNQHPbEeSsbLtAIkfQ9Q"/>
+    <message xmi:type="uml:Message" xmi:id="_8dJwkHPbEeSsbLtAIkfQ9Q" name="21:donneCommandeEtAfficherRecapitulatif()" messageSort="reply" receiveEvent="_8dMz4HPbEeSsbLtAIkfQ9Q" sendEvent="_8dLlwHPbEeSsbLtAIkfQ9Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="__vOdsHR9EeSVB4kQvYNjpg" name="fdrive">
+    <packagedElement xmi:type="uml:Package" xmi:id="_CLiIEHR-EeSVB4kQvYNjpg" name="controller"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_DSaQkHR-EeSVB4kQvYNjpg" name="model">
+      <packagedElement xmi:type="uml:Package" xmi:id="_PQ-7YHR-EeSVB4kQvYNjpg" name="entite">
+        <packagedElement xmi:type="uml:Package" xmi:id="_TY-rgHR-EeSVB4kQvYNjpg" name="impl"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_N1cKcHR-EeSVB4kQvYNjpg" name="view"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_iS0NkHR-EeSVB4kQvYNjpg" name="controller">
+    <packagedElement xmi:type="uml:Class" xmi:id="_nlCVIHR-EeSVB4kQvYNjpg" name="AssistanceRobot">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_2Aen0HlcEeSw794TAH9Sfg" name="verifierAssistanceDisponible"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_n2n0YHR-EeSVB4kQvYNjpg" name="Banque">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_0DrO0HlaEeSw794TAH9Sfg" name="verifierInfoBanquaire"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_oEaYwHR-EeSVB4kQvYNjpg" name="Commande"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_oTTwYHR-EeSVB4kQvYNjpg" name="Paiement">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_L_XoYHlaEeSw794TAH9Sfg" name="getMoyensPaiements"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Yq7VAHlaEeSw794TAH9Sfg" name="getInstanceMoyenPaiement"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_xoj3QHlaEeSw794TAH9Sfg" name="validerFormulaire"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5eeqoHlaEeSw794TAH9Sfg" name="afficheRecapitulatif"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ozo2QHR-EeSVB4kQvYNjpg" name="Panier">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_10jMAHlZEeSw794TAH9Sfg" name="updateCommandeCourante"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_IOzrYHlbEeSw794TAH9Sfg" name="affichePanier"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Vjf_IHlcEeSw794TAH9Sfg" name="validerPanier"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_srNkwHR-EeSVB4kQvYNjpg" name="Recherche">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_bm8vUHlcEeSw794TAH9Sfg" name="rechercheParCategorie"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_tsIPMHR-EeSVB4kQvYNjpg" name="Stock">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_XD6ecHlbEeSw794TAH9Sfg" name="verifierDisponibilite"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_Qx3p4HR_EeSVB4kQvYNjpg" client="_iS0NkHR-EeSVB4kQvYNjpg" supplier="_PjJM8HR_EeSVB4kQvYNjpg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_RUG0QHR_EeSVB4kQvYNjpg" client="_iS0NkHR-EeSVB4kQvYNjpg" supplier="_OtAPIHR_EeSVB4kQvYNjpg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Model" xmi:id="_l_jlEHR-EeSVB4kQvYNjpg" name="generated">
+    <packagedElement xmi:type="uml:Package" xmi:id="_l_5jUHR-EeSVB4kQvYNjpg" name="fdrive">
+      <packagedElement xmi:type="uml:Package" xmi:id="_l_6KYHR-EeSVB4kQvYNjpg" name="controller">
+        <packagedElement xmi:type="uml:Class" xmi:id="_l_7YgHR-EeSVB4kQvYNjpg" name="AssistanceRobot"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_OtAPIHR_EeSVB4kQvYNjpg" name="view"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_PjJM8HR_EeSVB4kQvYNjpg" name="model"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_ap4Q0HR_EeSVB4kQvYNjpg" name="view">
+    <packagedElement xmi:type="uml:Class" xmi:id="_dDi24HR_EeSVB4kQvYNjpg" name="Article" visibility="package">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Nvv2UHlZEeSw794TAH9Sfg" name="afficheFormulaire"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_dXd4cHR_EeSVB4kQvYNjpg" name="AssistanceRobot">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_zaZ9cHlcEeSw794TAH9Sfg" name="afficheFormulaireAssistance"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5eltcHlcEeSw794TAH9Sfg" name="prevenirClient"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_LS8f4HldEeSw794TAH9Sfg" name="affichePositionRobot"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Wr1DsHldEeSw794TAH9Sfg" name="afficheNonDisponibilite"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_dtz74HR_EeSVB4kQvYNjpg" name="Navigation"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_eFLTAHR_EeSVB4kQvYNjpg" name="Paiement">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Hze2wHlaEeSw794TAH9Sfg" name="choisirMoyenPaiement"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_V85ogHlaEeSw794TAH9Sfg" name="selectionneMoyenPaiement"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_t7ehgHlaEeSw794TAH9Sfg" name="afficheFormulairePaiement"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_eUW-gHR_EeSVB4kQvYNjpg" name="Panier">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_tu1pIHlZEeSw794TAH9Sfg" name="afficheAjout"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_AJmUQHlaEeSw794TAH9Sfg" name="afficheRecapitulatif"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_VWn2MHlbEeSw794TAH9Sfg" name="affichePanier"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_pXNPoHlbEeSw794TAH9Sfg" name="confirmerPanier"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_8hn2EHlbEeSw794TAH9Sfg" name="afficherSuggestion"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_DaLCQHlcEeSw794TAH9Sfg" name="confirmerSuggestion"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_PUsTgHlcEeSw794TAH9Sfg" name="choisirQuantite"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ejUAgHR_EeSVB4kQvYNjpg" name="Recherche">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_abBSQHldEeSw794TAH9Sfg" name="selectionneTypeRecherche"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_dRzSIHldEeSw794TAH9Sfg" name="afficheListeCategorie"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_evZ4kHldEeSw794TAH9Sfg" name="selectionneTypeCategorie"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ll0WwHldEeSw794TAH9Sfg" name="afficheResultatRecherche"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_o_CYgHR_EeSVB4kQvYNjpg" client="_ap4Q0HR_EeSVB4kQvYNjpg" supplier="_nkAk8HR_EeSVB4kQvYNjpg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_nkAk8HR_EeSVB4kQvYNjpg" name="controller"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_xYldYHR_EeSVB4kQvYNjpg" name="model">
+    <packagedElement xmi:type="uml:Class" xmi:id="_yxOEQHR_EeSVB4kQvYNjpg" name="Model">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_R6zsEHlaEeSw794TAH9Sfg" name="getMoyensPaiements"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_b8WCcHlaEeSw794TAH9Sfg" name="getInstanceMoyenPaiement"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_3A-tcHlaEeSw794TAH9Sfg" name="effectuerPaiement"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ejEXoHlbEeSw794TAH9Sfg" name="verifierDisponibilite"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5Nw4oHlbEeSw794TAH9Sfg" name="proposerArticleSimilaire"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_KPR44HlcEeSw794TAH9Sfg" name="afficheQuantiteMaximale"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_0WCtAHR_EeSVB4kQvYNjpg" name="model.entite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_d3jRQHSAEeSVB4kQvYNjpg" name="model.factory">
+    <packagedElement xmi:type="uml:Class" xmi:id="_ioLHoHSAEeSVB4kQvYNjpg" name="Article"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_jaXZkHSAEeSVB4kQvYNjpg" name="AssistanceRobot"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_kvzigHSAEeSVB4kQvYNjpg" name="MoyenPaiement"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_mR-f4HSAEeSVB4kQvYNjpg" name="Panier"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_nO40EHSAEeSVB4kQvYNjpg" name="Stock"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_wY9W8HSAEeSVB4kQvYNjpg" client="_d3jRQHSAEeSVB4kQvYNjpg" supplier="_ub_T8HSAEeSVB4kQvYNjpg"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_yTDkwHSDEeSVB4kQvYNjpg" name="Recherche"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_ub_T8HSAEeSVB4kQvYNjpg" name="model.entite"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_5QSkAHSAEeSVB4kQvYNjpg" name="model.entite">
+    <packagedElement xmi:type="uml:Class" xmi:id="_7zCNkHSAEeSVB4kQvYNjpg" name="Article"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_8q3NcHSAEeSVB4kQvYNjpg" name="AssitanceRobot"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_99O0QHSAEeSVB4kQvYNjpg" name="Caisse"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_-sH6kHSAEeSVB4kQvYNjpg" name="Client"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="__aaj8HSAEeSVB4kQvYNjpg" name="Commande"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_AO_bgHSBEeSVB4kQvYNjpg" name="Douchette"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_BTQU4HSBEeSVB4kQvYNjpg" name="LigneArticle"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_CPwZYHSBEeSVB4kQvYNjpg" name="Livraison"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_EUFBkHSBEeSVB4kQvYNjpg" name="Livreur"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_FV7gIHSBEeSVB4kQvYNjpg" name="MoyenPaiement">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_pdD1cHlaEeSw794TAH9Sfg" name="creerMoyenPaiement"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_GZ3pYHSBEeSVB4kQvYNjpg" name="Panier"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Hea2oHSBEeSVB4kQvYNjpg" name="Robot"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_LaFa8HSBEeSVB4kQvYNjpg" name="TabletteInteractive"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_NXzr4HSBEeSVB4kQvYNjpg" name="Transporteur"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_VvPQ4HSBEeSVB4kQvYNjpg" name="model.entite.impl"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_KZVdsHSDEeSVB4kQvYNjpg" name="Recherche"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_dNyGEHSBEeSVB4kQvYNjpg" name="model.entite.impl">
+    <packagedElement xmi:type="uml:Class" xmi:id="_jHdPMHSBEeSVB4kQvYNjpg" name="AssistanceRobotChargementVoiture"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_lF21kHSBEeSVB4kQvYNjpg" name="AssistanceRobotMagasin"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_nRe_oHSBEeSVB4kQvYNjpg" name="AssistanceRobotStock">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_JeuwQHldEeSw794TAH9Sfg" name="verifierDisponibilite"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_o6gL4HSBEeSVB4kQvYNjpg" name="CommandeEnLigne"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_qQ4wAHSBEeSVB4kQvYNjpg" name="CommandeSurPlace"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_r0_nEHSBEeSVB4kQvYNjpg" name="LivraisonDomicile"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_uWG48HSBEeSVB4kQvYNjpg" name="LivraisonVoiture"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_yZsqMHSBEeSVB4kQvYNjpg" name="PaiementADistance"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_zxYO0HSBEeSVB4kQvYNjpg" name="PaiementCash"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_17WMAHSBEeSVB4kQvYNjpg" name="PaiementCB16Chiffres"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_5WF0kHSBEeSVB4kQvYNjpg" name="PaiementCB4Chiffres"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_7WKO4HSBEeSVB4kQvYNjpg" name="PaiementCheque"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_9OuTAHSBEeSVB4kQvYNjpg" name="PaiementNFC"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_9_x8gHSBEeSVB4kQvYNjpg" name="PaiementSurPlace"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_nxfDcHSDEeSVB4kQvYNjpg" name="RechercheCritere">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_h_N48HlcEeSw794TAH9Sfg" name="getListeArticle"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_pTaJMHSDEeSVB4kQvYNjpg" name="RechercheQRCode"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_q97KQHSDEeSVB4kQvYNjpg" name="RecherchePhotos"/>
+  </packagedElement>
+</uml:Model>

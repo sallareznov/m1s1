@@ -1,0 +1,309 @@
+\section*{Listing des dossiers et fichiers}
+\begin{description}
+	\item[donnees/ :] contient les données de test
+	\item[certificat\_bin\_pack.ml :] fichier d'implémentation du module Certificat\_bin\_pack
+	\item[certificat\_bin\_pack.mli :] fichier d'interface du module Certificat\_bin\_pack
+	\item[Makefile]
+	\item[probleme\_bin\_pack.ml :] fichier d'implémentation du module Probleme\_bin\_pack
+	\item[probleme\_bin\_pack.mli :] fichier d'interface du module Probleme\_bin\_pack
+	\item[probleme\_partition.ml :] fichier d'implémentation du module Probleme\_partition
+	\item[probleme\_partition.mli :] fichier d'interface du module Probleme\_partition
+	\item[probleme\_sum.ml :] fichier d'implémentation du module Probleme\_sum
+	\item[probleme\_sum.mli :] fichier d'interface du module Probleme\_sum
+	\item[solve\_bin\_pack.ml :] fichier contenant le programme de résolution du problème de binpacking
+	\item[solve\_partition.ml :] fichier contenant le programme de résolution du problème de partitionnement
+	\item[solve\_sum.ml :] fichier contenant le programme de résolution du problème sum
+\end{description}
+
+\section*{Mode opératoire}
+
+Techniquement, il n'y a que 4 lettres à taper pour compiler le projet, le Makefile se charge du reste. Plus précisément :
+\begin{itemize}[label=\ding{86}]
+	\item se placer à la racine du projet (dossier tp4\_diagne-tello) et exécuter la commande \verb+make+ pour générer les fichiers \verb+cmi, cmx, o+ et exécutables du projet. 3 exécutables sont créés :
+		\begin{itemize}[label=\ding{254}]
+			\item \verb+solve_bin_pack+ : ./solve\_bin\_pack <fichier> (-v | -nd | -exh) lit l'instance du problème de bin-packing dans fichier et recherche un certificat par le ou les modes choisis. Une solution est affichée, s'il en existe.\\
+-v = mode vérification : l'utilisateur entre un certificat, et le programme vérifie que c'est une solution au problème\\
+-nd = mode non déterministe : un certificat aléatoire est générée et passé au programme\\
+-exh = mode exhaustif : tous les certificats possibles sont passés au programme. Le premier qui satisfait le problème est affiché.
+			\item \verb+solve_partition+ : ./solve\_partition <fichier> : lit l'instance du problème de partitionnement dans fichier puis le réduit en problème de bin-packing avec 2 sacs et affiche un certificat si la somme des entiers du sac 0 est égale à celle des entiers du sac 1.
+			\item \verb+solve_sum+ : ./solve\_sum <fichier> lit l'instance du problème sum puis le réduit en problème de partitionnement.
+		\end{itemize}
+	\item tester.
+\end{itemize}
+
+\section*{Réponses aux questions}
+
+\section*{1 Qu'est-ce qu'une propriété NP}
+
+\subsection*{Q1. La propriété est NP}
+\underline{Définir une notion de certificat}
+~\\~\\
+Un certificat est une information que l'on ajoute à une donnée du problème que la réponse au problème pour cette donnée est positive ou négative.\\
+Dans ce problème, le certificat pourrait être un tableau de n entiers, qui pour chaque \verb+i+ appartenant à \verb+[1..n]+ associe un numéro de sac \verb+j+ appartenant à \verb+[1..k]+.\\
+La taille du certificat est donc \verb+n+.
+~\\~\\
+\underline{Comment penser vous l'implémenter ?}
+~\\~\\
+Nous pensons l'implémenter sous la forme d'un tableau à une dimension dont les indices correspondront aux objets et les valeurs aux numéros de sac.
+
+~\\
+\underline{Quelle sera la taille d'un certificat ?}
+~\\~\\
+La taille d'un certificat est le nombre d'objets * la taille de la représentation binaire d'un objet <=> \fbox{T $\simeq$ n * ($log n$)}
+
+~\\
+\underline{La taille des certificats est-elle bien bornée polynômialement par rapport à la taille de l'entrée ?}
+~\\
+Oui, la taille des certificats bornée polynômialement par rapport à la taille de l'entrée.
+
+~\\
+\underline{Proposez un algorithme de vérification associé}
+\begin{tabbing}
+	\hspace{1cm}\=\hspace{1cm}\=\hspace{1cm}\=\kill
+	\verb+boolean verifieCertificat(Certificat c, Probleme u) {+\\
+		\>\verb+int[] capacitesSacs = new int[u.k];+\\
+		\>\verb+pour i de 0 à u.n - 1+\\
+			\>\>\verb+int nbSac = cert[i];+\\
+			\>\>\verb+capacitesSac[nbSac] +\verb+= u.p[i];+\\
+			\>\>\verb+si (capacitesSac[nbSac] > u.c) alors+\\
+				\>\>\>\verb+retourner faux;+\\
+			\>\>\verb+fin si+\\
+		\>\verb+fin pour+\\
+		\>\verb+retourner vrai;+\\
+	\verb+}+
+\end{tabbing}
+
+~\\
+\underline{Est-il bien polynômial ?}
+~\\~\\
+Oui, il est polynômial car sa complexité est de l'ordre de \verb+O(n)+.
+
+\subsection*{Q2. NP = Non-déterministe Polynômial}
+
+\underline{Quel serait le schéma d'un algorithme non-déterministe polynomial pour le problème ?}
+~\\~\\
+Une méthode non-déterministe consisterait à choisir aléatoirement, pour chaque objet, le numéro de sac dans lequel le mettre.
+
+\begin{tabbing}
+	\hspace{1cm}\=\hspace{1cm}\=\hspace{1cm}\=\kill
+	\verb+boolean aUneSolutionNonDeterministe(int n, int[] p, int c, int k) {+\\
+		\>\verb+int[n] objToSacs;+\\
+		\>\verb+pour i de 0 à n - 1 faire+\\
+			\>\>\verb+objToSacs[i] = rand(k);+\\
+		\>\verb+fin pour+\\
+		\>\verb+U = (n, p, c, k);+\\
+		\>\verb+C = objToSacs;+\\
+		\>\verb+A(C, U);+\\
+	\verb+}+
+\end{tabbing}
+
+\subsection*{Q3. NP $\subset$ ExpTime}
+
+\subsubsection{Q3.1.}
+
+\underline{Pour k et n fixés, combien de valeurs peut-prendre un certificat ?}
+~\\~\\
+Pour \verb+k+ et \verb+n+ fixés, un certificat peut prendre $k^n$ valeurs.
+
+\subsubsection{Q3.2 Énumération de tous les certificats}
+
+\underline{Quel ordre proposez-vous ?}
+~\\~\\
+Le premier certificat serait celui pour lequel tous les objets sont dans le premier sac. Puis on incrémentera le numéro de sac du dernier objet, comme pour une énumération de nombres binaires.\\
+Exemple : Pour \verb+n = 3+ et \verb+k = 2+, on aura :
+\begin{tabbing}
+	\hspace{1cm}\=\kill
+	\>	\verb+0 0 0+\\
+	\>	\verb+0 0 1+\\
+	\>	\verb+0 1 0+\\
+	\>	\verb+0 1 1+\\
+	\>	\verb+1 0 0+\\
+	\>	\verb+1 0 1+\\
+	\>	\verb+1 1 0+\\
+	\>	\verb+1 1 1+
+\end{tabbing}
+
+\subsubsection{Q3.3 L'algorithme du British Museum}
+
+\underline{Comment déduire de ce qui précède un algorithme pour tester si le problème a une solution ?}
+~\\~\\
+Il est plus facile de mettre en place un itérateur qui transforme le certificat passé en paramètre en son suivant (l'algorithme a aussi besoin de k pour savoir s'arrêter au (k - 1)e sac et passer
+		à l'indice suivant).
+\begin{tabbing}
+	\hspace{1cm}\=\hspace{1cm}\=\hspace{1cm}\=\kill
+	\verb+void certificatSuivant(Certificat certificat, int k) {+\\
+		\>\verb+int[] donnees = certificat.donnees;+\\
+		\>\verb+int indice = donnees.length - 1 et fait == false;+\\
+		\>\verb+tant que (indice >= 0 et !fait) faire+\\
+			\>\>\verb+si (donnees[indice] < k - 1) alors+\\
+				\>\>\>\verb+donnees[indice]+++\verb+;+\\
+				\>\>\>\verb+fait = true;+\\
+			\>\>\verb+sinon+\\
+				\>\>\>\verb+donnees[indice] = 0;+\\
+				\>\>\>\verb+indice--;+\\
+			\>\>\verb+fin si+\\
+		\>\verb+fin tant que+\\
+		\>\verb+si (indice < 0) alors+\\
+			\>\>\verb+exception Pas_de_certificat_suivant;+\\
+		\>\verb+fin si+\\
+	\verb+}+
+\end{tabbing}
+~\\
+L'algorithme déterministe se présenterait comme suit :
+\begin{tabbing}
+	\hspace{1cm}\=\hspace{1cm}\=\hspace{1cm}\=\kill
+	\verb+boolean aUneSolutionDeterministe(Probleme probleme) {+\\
+		\>\verb+int n = probleme.nbre_objets;+\\
+		\>\verb+int k = probleme.nbre_sacs;+\\
+		\>\verb+int[] donnees = new int[n];+\\
+		\>\verb+certificat = { donnees = donnees };+\\
+		\>\verb+trouve = false;+\\
+		\>\verb+try {+\\
+			\>\>\verb+tant que (!trouve) faire+\\
+				\>\>\>\verb+certificat_suivant certificat k;+\\
+				\>\>\>\verb+trouve = verifie_certificat certificat probleme;+\\
+			\>\>\verb+fin tant que+\\
+			\>\>\verb+si (trouve) alors+\\
+				\>\>\>\verb+affiche_certificat+\\
+			\>\>\verb+fin si+\\
+		\>\verb+}+
+		\>\verb+catch (ArrayIndexOfBoundsException) {+\\
+			\>\>\verb+printf "Pas de solution";+\\
+		\>\verb+}+\\
+	\verb+}+
+
+\end{tabbing}
+~\\
+\underline{Quelle complexité a cet algorithme ?}
+~\\~\\
+Cet algorithme est de complexité \verb+O(n * k)+.
+
+\section*{2 Réductions polynômiales}
+
+\subsection*{Q4.}
+
+\textit{BinPack} est défini comme ceci :
+	\begin{tabbing}
+		\hspace{1cm}\=\kill
+		\textit{Donnée:}\\
+			\>\textit{n} - un nombre d'objets\\
+			\>\textit{$x_{1},...,x_{n}$} - \textit{n} entiers, les poids des objets\\
+			\>\textit{c} - la capacité d'un sac\\
+			\>\textit{k} - le nombre de sacs\\
+		\textit{Sortie:}\\
+			\>Oui, s'il existe une mise en sachets possible, i.e.:\\
+			\>\textit{aff} : [1..\textit{n}] $\rightarrow$ [1..\textit{k}] - à chaque objet, on attribut un numéro de sac tel que :\\
+			\>$\sum\nolimits_{i/aff(i)=j} x_{i} \leq c$, pour tout numéro de sac \textit{j}, $1 \leq j \leq k$. - aucun sac n'est trop chargé.\\
+			\>Non sinon
+	\end{tabbing}
+~\\
+\textit{Partition} est défini comme ceci :
+	\begin{tabbing}
+		\hspace{1cm}\=\kill
+		\textit{Donnée:}\\
+			\>\textit{n} - un nombre d'entiers\\
+			\>\textit{$x_{1},...,x_{n}$} - les entiers\\
+		\textit{Sortie:}\\
+			\>Oui, s'il existe un sous-ensemble [1..\textit{n}] tel que la somme des $x_{i}$ correspondants soit\\
+			\>exactement la moitié de la somme des $x_{i}$, i.e $J \subset [1..n]$, tel que\\
+			\>$\sum\nolimits_{i \in J} x_{i} = \sum\nolimits_{i \notin J} x_{i} = \frac{\sum\nolimits_{i = 1}^{n} x_{i}}{2}$
+	\end{tabbing}
+
+\subsubsection{Q4.1.}
+
+\underline{Montrer que Partition se réduit polynômialement en BinPack}
+~\\~\\
+\textit{Partition} peut se réduire polynômialement en BinPack en prenant 2 sacs de capacité \textit{c} = $\frac{\sum\nolimits_{i = 1}^{n} x_{i}}{2}$, le  tableau des entiers de \textit{Partition} correspondant au tableau des poids de \textit{BinPack}.\\
+De ce fait, une instance de \textit{Partition} est positive si la somme des entiers du sac 0 = la somme des entiers du sac 1 = somme des entiers de l'instance / 2.\\~\\
+\begin{tabular}{|l|l|}
+  \hline
+  \textit{BinPack} & \textit{Partition}\\
+  \hline
+  \verb+nbre\_objets+ & \verb+nbre\_entiers+ \\
+  \hline
+  \verb+poids[]+ & \verb+entiers[]+ \\
+  \hline
+  \verb+capacite+ & \textit{$\sum\nolimits_{i = 1}^{n} x_{i} / 2$}\\
+  \hline
+  \verb+nbre_sacs+ & 2\\
+  \hline
+\end{tabular}
+
+\subsubsection{Q4.2.}
+
+\underline{Partition est connue NP-dure. Qu'en déduire pour BinPack ?}
+~\\~\\
+\textit{BinPack} est NP-complet.
+
+\subsection*{Q5.}
+
+\textit{Sum} est défini comme ceci :
+	\begin{tabbing}
+		\hspace{1cm}\=\kill
+		\textit{Donnée:}\\
+			\>\textit{n} - un nombre d'entiers\\
+			\>\textit{$x_{1},...,x_{n}$} - les entiers\\
+			\>\textit{c} - un entier cible\\
+		\textit{Sortie:}\\
+			\>Oui, s'il existe un sous-ensemble [1..\textit{n}] tel que la somme des $x_{i}$ correspondants soit\\
+			\>exactement \textit{c}, i.e. $J \subset [1..n]$, tel que $\sum\nolimits_{i \in J} x_{i} = c$\\
+			\>Non sinon
+	\end{tabbing}
+	
+\subsubsection{Q5.1}
+
+\underline{Entre Sum et Partition lequel des deux problèmes peut être presque vu comme un cas particulier}
+\underline{de l'autre ?}
+~\\~\\
+\textit{Partition} peut être vu comme un cas particulier de \textit{Sum}.
+
+\subsubsection{Q5.2}
+
+\underline{Montrer que Sum se réduit en Partition}
+~\\~\\
+Nous savons que \textit{Partition} est un cas particulier de \textit{Sum}, la valeur de la cible de étant la somme des entiers de l'instance. Pour réduire \textit{Sum} en \textit{Partition}, il suffit de "changer" la somme de ces entiers. C'est-à-dire, rajouter au tableau d'entiers de l'instance de \textit{Partition} la valeur absolue de $(2 * cible) - somme des entiers$.\\ Appelons \textit{oldsigma} l'ancienne somme des entiers et \textit{newsigma} la nouvelle. De ce fait, la nouvelle somme des entiers est :
+\begin{tabbing}
+	\hspace{2cm}\=\kill
+	$newsigma = oldsigma + abs ((2 * cible) - oldsigma)$\\
+	\>$	= oldsigma + (2 * cible) - oldsigma$\\
+	\>$ = 2 * cible$
+\end{tabbing}
+
+L'instance de \textit{Partition} obtenue aura alors pour objectif de partitionner son tableau d'entiers en 2 parties, la somme de chaque partie étant $(2 * cible) / 2 = cible.$ L'ensemble recherché sera le premier ensemble de l'instance de \textit{Partition} (on retire l'entier ajouté s'il s'y trouve).\\
+
+\begin{tabular}{|l|l|}
+  \hline
+  \textit{Partition} & \textit{Sum}\\
+  \hline
+  \verb+nbre\_entiers+ & \verb+nbre\_entiers+ \\
+  \hline
+  \verb+entiers[]::(2 * cible - oldsigma)+ & \verb+entiers[]+ \\
+  \hline
+\end{tabular}
+
+\subsection*{Q7. Question bonus : deux réductions un peu plus dures}
+
+
+\subsubsection{Q7.1}
+
+\underline{Montrer que BinPackDiff se réduit polynômialement en BinPack}
+~\\~\\
+La seule différence entre les problèmes \textit{BinPackDiff} et \textit{BinPack} est que la capacité des sacs du premier est variable, alors que les sacs du deuxième sont de capacité fixe. Pour transformer le premier en le deuxième, il suffit donc d'équilibrer les capacités. C'est-à-dire, choisir comme capacité fixe le ou les sacs avec la plus grande capacité, et rajouter des objets dans les sacs de plus faibles capacité. Un exemple permet de mieux comprendre. Prenons celui du fichier \verb+donnees/data_reduction/exBinPackDiff4+ :\\
+Nous avons 8 objets de poids de poids respectifs : 2, 6, 5, 2, 5, 5, 2, 8 et 5 sacs de capacités respectives : 8, 8, 8, 7, 6\\
+L'instance de \textit{BinPackDiff}, que nous appellerons \verb+BPD+ construite est :\\
+nbre\_objets = 8\\
+poids = [|2;6;5;2;5;5;2;8|]\\
+capacites = [|8;8;8;5;6|]\\
+nbre\_sacs = 5
+~\\~\\
+L'instance de \textit{BinPack} (\verb+BP+) que l'on aura après réduction sera :\\
+nbre\_objets = 8\\
+poids = ?\\
+capacites = ?\\
+nbre\_sacs = 5
+~\\
+
+%n + k
+%c - c1 + c - c2 + ...
+%max c + max p + 1
+Comme nous l'avions dit plus haut, il faut rajouter des objets dans les sacs de plus faible capacité pour équilibrer la capacité fixe et ne pas fausser le problème. Rappelons que les capacités du problème \verb+BPD+

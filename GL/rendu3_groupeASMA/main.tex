@@ -1,0 +1,52 @@
+\documentclass[a4paper,12pt,oneside]{report}
+
+\input{frontmatter/packages}
+\usepackage[underline=true,rounded corners=false]{pgf-umlsd}
+
+\usepackage{listings}
+\usepackage{color}
+
+\onehalfspacing
+
+\graphicspath{{images/}}
+
+\renewcommand{\contentsname}{Table des matières}
+\renewcommand{\chaptername}{Chapitre}
+\renewcommand*\glossarypreamble{\thispagestyle{glossary}}
+
+\input{frontmatter/pagestyles}
+\input{frontmatter/glossary}
+
+\pagestyle{document}
+
+\begin{document}
+	\input{frontmatter/cover}
+	\input{frontmatter/blank_page}
+	 \tableofcontents
+	\input{frontmatter/introduction}
+	\chapter{Système actuel}
+		\thispagestyle{document}
+	\chapter{Système proposé}
+		\thispagestyle{document}
+		\section{Vue d'ensemble}
+		\section{Exigences fonctionnelles}
+		\section{Exigences non fonctionnelles}
+		\section{Modèles}
+			\input{scenarios_concrets}
+			\input{use_cases_diagram}
+			\input{use_cases_hierarchy}
+			\input{textual_descriptions/use_cases_textual_description}
+			\input{models}
+			\input{modeles_objets}
+			\subsection{Modèles dynamiques}
+				\includegraphics[width=\textwidth]{sequence_diagrams/search_by_category.pdf}
+	
+	\glossarystyle{listgroup}
+	\pagestyle{glossary}
+	\printglossary[title=Glossaire métier,toctitle=Glossaire métier]
+	
+	\chapter*{Références/bibliographie}
+		\url{http://wikipedia.org} \\
+		\url{http://larousse.fr} \\
+
+\end{document}

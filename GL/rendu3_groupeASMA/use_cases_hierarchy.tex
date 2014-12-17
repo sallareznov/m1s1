@@ -1,0 +1,29 @@
+\subsection{Hiérarchie des cas d'utilisation}
+	\newpage
+			\newcolumntype{R}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash }b{#1}}
+\newcolumntype{C}[1]{>{\raggedright\arraybackslash }b{#1}}
+			\begin{longtable}{|R{5cm}|C{4cm}|L{4cm}|L{1cm}}
+  \hline
+  Cas d'utilisation & Utilisateur & Risque & Moyenne\\
+  	\hline
+	 RechercherArticle & 4 : Ne sera pas forcément utilisé si l’utilisateur connaît le magasin par exemple & 5 : plusieurs manières de rechercher : par photo, par QRCode, catégorie...Les technologies ne sont pas encore connues et maîtrisées de tous & 4.5 \\
+	 \hline
+	 ConsulterHistoriqueDAchat & 2: Cette fonctionnalité n’est pas primordiale. Il s’agit d’un plus pour l’utilisation de l’application & 1: L’historique d’achat de chaque utilisateur est stocké dans une base de donnée. Il suffit de faire une requete pour les récupérer. & 1.5\\
+	 \hline
+	 AjouterPanier & 5 : Primordial. L’utilisateur doit pouvoir ajouter des articles dans son panier virtuel pour pouvoir effectuer ses courses & 2 : Il suffit d’ajouter la référence de l’article et sa quantité dans notre liste
+Vérifier au préalable en base que l’article est disponible en quantité suffisante & 3.5\\
+	 \hline
+	 ModifierPanier & 4 : Souvent l’utilisateur se trompe dans le choix de ses articles et il veut souvent modifier les articles qu’il a déjà sélectionnés. & 2: Il suffit de modifier une ligne d’article dans le panier ainsi que la base de donnée des articles. & 3\\
+	 \hline
+	 AssistanceRobot & 5 : Si un utilisateur vient dans notre magasin, c’est sûrement pour profiter de nos fonctionnalités novatrices & 4 : le robot intervient dans nos stocks et peut aider les utilisateurs (dans le magasin et/ou au chargement) & 4.5\\
+	 \hline
+	 Guidage & 4 : Les utilisateurs qui n’ont pas l’habitude de notre hypermarché auront forcément besoin du guidage pour se repérer & 5 : En plus de ne pas trop s’y connaître dans cette technologie, il nous faut maîtriser quelques algorithmes de plus court chemin (Ford Fulkerson, Dijkstra, Bellman ?), et pouvoir gérer le fait de capter le signal GPS à l’intérieur de l’hypermarché & 4.5\\
+	 \hline
+	 ValiderPanier & 4 : Ce sera la fonction qui permettra à l’utilisateur de confirmer ses achats, d’activer l’autoguidage vers la caisse et de passer au paiement. C’est une étape obligatoire. & 4: La validation du panier active beaucoup de fonctionnalités du système : le guidage, la préparation des commandes par les robots. & 4\\
+	 \hline
+	 Payer & 4 : Vital pour l’utilisateur; il doit payer ses articles & 5 : gérer les différentes manières de paiement et la sécurité (réseau lors de paiements à distance) & 4.5\\
+	 \hline
+	 RecupererCommande & 4 : très utile pour l’utilisateur; il choisira probablement la livraison ou le chargement par robot & 3 : affecter une commande à un type de livraison, pas de technologie particulière & 3.5\\
+  	\hline
+\end{longtable}

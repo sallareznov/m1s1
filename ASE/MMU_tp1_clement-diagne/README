@@ -1,0 +1,9 @@
+Auteurs :
+- Maxime CLEMENT
+- Salla DIAGNE
+
+Instructions :
+	- se placer dans le répertoire tp8_clement-diagne et exécuter la commande make pour générer les fichiers objets et l'exécutable du programme mi_kernel
+	- exécuter le programme en tapant ./bin/mi_kernel
+
+

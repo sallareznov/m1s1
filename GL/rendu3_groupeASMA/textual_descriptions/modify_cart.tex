@@ -1,0 +1,44 @@
+\subsubsection{ModifierPanier}
+	\underline{But} : Le client souhaite modifier un article de sa commande courante à l'aide de l'application fDrive.\\
+	\underline{Acteur principal} : Un client.\\
+	\underline{Date de création} : 21/10/2014\\
+	\underline{Responable} : Groupe ASMA\\
+	\underline{Version} : 1.0\\
+	\underline{Déclenchement} : Le client sélectionne un article dans sa commande courante dans l'application fDrive.\\
+	\underline{Pré-condition} : Le client est authentifié sur l'application fDrive.\\
+	\underline{Séquence nominale} :
+		\begin{enumerate}
+			\item Le système affiche l’article sélectionné ainsi que la quantité.		
+			\item Le système affiche un formulaire pour modifier l’article.
+			\item Le système vérifie la modification.
+			\item Le système affiche la modification.
+			\item Le système met à jour la commande courante du client.
+			\item Fin du cas d’utilisation.
+		\end{enumerate}
+	\underline{Post-condition} : La commande courante du client a été modifiée.\\
+	\underline{Scénario alternatif} :\\
+	 	3a [La quantité sélectionnée est inférieure à 0.]
+		 	\begin{enumerate}[label=3a.\arabic* ]
+		 		\item Le système prévient l'utilisateur.
+		 		\item Fin de la session.
+		 	\end{enumerate}
+	\underline{Scénario d'exception} :\\
+		2a [Le client supprime un article.]
+			\begin{enumerate}[label=2a.\arabic* ]
+				\item Le système prévient l'utilisateur.
+				\item Le système supprime l'article de la commande courante.
+				\item Le système met à jour la commande courante du client.
+				\item Fin de la session.
+			\end{enumerate}
+		2b [Le client annule la modification de sa commande.]
+			\begin{enumerate}[label=2b.\arabic* ]
+				\item Le système prévient l'utilisateur.
+				\item Fin de la session.
+			\end{enumerate}
+		3b [La quantité sélectionnée est égale à 0]
+			\begin{enumerate}[label=3b.\arabic* ]
+				\item Le système prévient l'utilisateur.
+				\item Le système supprime l'article de la commande courante.
+				\item Le système met à jour la commande courante du client.
+				\item Fin de la session.
+			\end{enumerate}

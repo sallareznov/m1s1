@@ -1,0 +1,46 @@
+\contentsline {chapter}{Introduction}{3}{chapter*.1}
+\contentsline {chapter}{\numberline {1}Syst\IeC {\`e}me actuel}{4}{chapter.1}
+\contentsline {chapter}{\numberline {2}Syst\IeC {\`e}me propos\IeC {\'e}}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Vue d'ensemble}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}Exigences fonctionnelles}{5}{section.2.2}
+\contentsline {section}{\numberline {2.3}Exigences non fonctionnelles}{5}{section.2.3}
+\contentsline {section}{\numberline {2.4}Mod\IeC {\`e}les}{5}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Sc\IeC {\'e}narios concrets}{5}{subsection.2.4.1}
+\contentsline {subsubsection}{Avec un \gls {smartphone} \IeC {\`a} l'\gls {hypermarche}}{5}{section*.2}
+\contentsline {subsubsection}{Sans \gls {smartphone} \IeC {\`a} l'\gls {hypermarche}}{6}{section*.3}
+\contentsline {subsubsection}{Commande en ligne et livraison \IeC {\`a} domicile}{7}{section*.4}
+\contentsline {subsubsection}{Commande en ligne sur \gls {smartphone} et Drive}{7}{section*.5}
+\contentsline {subsubsection}{Commande d'un produit inconnu avec \gls {qr_code}}{7}{section*.6}
+\contentsline {subsubsection}{Commande d'un produit inconnu avec une photo}{8}{section*.7}
+\contentsline {subsubsection}{Appel t\IeC {\'e}l\IeC {\'e}phonique et promotions}{8}{section*.8}
+\contentsline {subsubsection}{Articles non disponibles}{9}{section*.9}
+\contentsline {subsubsection}{Commande d'anniversaire}{9}{section*.10}
+\contentsline {subsubsection}{Achat de produits frais}{9}{section*.11}
+\contentsline {subsection}{\numberline {2.4.2}Diagramme des cas d'utilisation}{10}{subsection.2.4.2}
+\contentsline {subsubsection}{Diagramme g\IeC {\'e}n\IeC {\'e}ral}{10}{section*.12}
+\contentsline {subsubsection}{Rechercher des articles}{11}{section*.13}
+\contentsline {subsubsection}{Payer}{11}{section*.14}
+\contentsline {subsubsection}{Demander un \gls {robot}}{12}{section*.15}
+\contentsline {subsubsection}{R\IeC {\'e}cup\IeC {\'e}rer sa commande}{12}{section*.16}
+\contentsline {subsection}{\numberline {2.4.3}Hi\IeC {\'e}rarchie des cas d'utilisation}{12}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Description textuelle des cas d'utilisation}{15}{subsection.2.4.4}
+\contentsline {subsubsection}{RechercherArticleParCategorie}{15}{section*.17}
+\contentsline {subsubsection}{AjouterPanier}{15}{section*.18}
+\contentsline {subsubsection}{ModifierPanier}{16}{section*.19}
+\contentsline {subsubsection}{DemanderAssistanceRobot}{18}{section*.20}
+\contentsline {subsubsection}{ValiderPanier}{19}{section*.21}
+\contentsline {subsubsection}{Paiement}{20}{section*.22}
+\contentsline {subsection}{\numberline {2.4.5}Maquettes de l'application mobile}{22}{subsection.2.4.5}
+\contentsline {subsubsection}{Accueil}{22}{section*.23}
+\contentsline {subsubsection}{Menu principal}{23}{section*.24}
+\contentsline {subsubsection}{Rechercher un article}{24}{section*.25}
+\contentsline {subsubsection}{Ajouter un article au panier}{25}{section*.26}
+\contentsline {subsubsection}{Promotions du magasin}{26}{section*.27}
+\contentsline {subsubsection}{Navigation vers un rayon}{27}{section*.28}
+\contentsline {subsubsection}{Historique des achats}{28}{section*.29}
+\contentsline {subsubsection}{Guidage/Navigation}{29}{section*.30}
+\contentsline {subsubsection}{Voir panier}{30}{section*.31}
+\contentsline {subsubsection}{R\IeC {\'e}capitulation de la commande}{31}{section*.32}
+\contentsline {subsection}{\numberline {2.4.6}Mod\IeC {\`e}les d'objets}{32}{subsection.2.4.6}
+\contentsline {subsection}{\numberline {2.4.7}Mod\IeC {\`e}les dynamiques}{34}{subsection.2.4.7}
+\contentsline {chapter}{Glossaire m\IeC {\'e}tier}{35}{section*.33}

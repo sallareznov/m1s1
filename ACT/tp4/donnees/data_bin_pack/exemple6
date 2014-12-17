@@ -1,0 +1,34 @@
+12
+5
+2
+2
+4
+6
+2
+5
+5
+3
+7
+1
+1
+5
+9
+
+
+/*************************************/
+12 objets: 5 2 2 4 6 2 5 5 3 7 1 1
+5 sacs: 9  
+
+une solution (la première ds l'ordre lexico):
+objet 0 dans sac 0
+objet 1 dans sac 0
+objet 2 dans sac 0
+objet 3 dans sac 1
+objet 4 dans sac 2
+objet 5 dans sac 2
+objet 6 dans sac 1
+objet 7 dans sac 3
+objet 8 dans sac 3
+objet 9 dans sac 4
+objet 10 dans sac 2
+objet 11 dans sac 3

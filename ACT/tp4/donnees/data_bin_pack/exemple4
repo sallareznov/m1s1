@@ -1,0 +1,27 @@
+8
+2
+6
+5
+2
+5
+5
+2
+8
+5
+8
+
+
+
+//********************************************/
+8 objets: 2 6 5 2 5 5 2 8
+5 sacs: 8 8 8 8 8
+
+une solution (la premiere ds l'ordre lexico):
+objet 0 dans sac 0
+objet 1 dans sac 0
+objet 2 dans sac 1
+objet 3 dans sac 1
+objet 4 dans sac 2
+objet 5 dans sac 3
+objet 6 dans sac 2
+objet 7 dans sac 4

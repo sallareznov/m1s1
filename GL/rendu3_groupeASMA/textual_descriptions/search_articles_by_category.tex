@@ -1,0 +1,22 @@
+\subsubsection{RechercherArticleParCategorie}
+	\underline{But} : Le client recherche un article sur l'application de son smartphone.\\
+	\underline{Acteur principal} : Le client.\\
+	\underline{Date de création} : 21/10/2014\\
+	\underline{Responsable} : Groupe ASMA\\
+	\underline{Version} : 1.0\\
+	\underline{Déclenchement} : Le client sélection l'option "rechercher article par catégorie" dans son application.\\
+	\underline{Pré-condition} : Le client est authentifié sur l'application fDrive.\\
+	\underline{Séquence nominale} :
+		\begin{enumerate}
+			\item Le client sélectionne la catégorie d'articles qu'il désire consulter.
+			\item Le système affiche la liste des articles concernés.
+			\item Fin du cas d'utilisation.
+		\end{enumerate}
+	\underline{Post-condition} : Aucune.\\
+	\underline{Scénario alternatif} : Aucun\\
+	\underline{Scénario d'exception} :\\
+ 		1a [Le client annule sa recherche.]
+ 			\begin{enumerate}[label=1a.\arabic* ]
+ 				\item Le système prévient l'utilisateur.
+ 				\item Fin de la session.
+ 			\end{enumerate}

@@ -1,0 +1,146 @@
+Auteurs :
+- Salla DIAGNE
+- Anis TELLO
+
+PREALABLE :
+se placer à la racine du projet et exécuter la commande make pour générer l'exécutable divide
+Taper ./divide pour voir comment s'utilise le programme
+
+Q2.
+(0,3) : A préfère 0 à 3, B préfère 3 à 0
+(0,5) : A préfère 0 à 5, B préfère 5 à 0
+(0,1) : A préfère 0 à 1, B préfère 1 à 0
+(0,4) : A préfère 0 à 4, B préfère 4 à 0
+(0,2) : A préfère 0 à 2, B préfère 2 à 0
+(3,4) : A préfère 3 à 4, B préfère 4 à 3
+(3,2) : A préfère 3 à 2, B préfère 2 à 3
+(5,1) : A préfère 5 à 1, B préfère 1 à 5
+(5,4) : A préfère 5 à 4, B préfère 4 à 5
+(5,2) : A préfère 5 à 2, B préfère 2 à 5
+(1,4) : A préfère 1 à 4, B préfère 4 à 1
+(1,2) : A préfère 1 à 2, B préfère 2 à 1
+(4,2) : A préfère 4 à 2, B préfère 2 à 4
+
+On a un maximum d'inversions quand les 2 listes sont triées dans le sens contraire.
+Dans ce cas, on a n(n-1)/2 inversions.
+
+Q3.
+Si on note d(X,Y) la distance entre X et Y : Yx = d(X,Y).
+
+Q7.
+divide 1 = distance log
+divide 0 = distance quadra
+
+--------------------------------- ex1.dat ---------------------------------
+
+salla@salla-Satellite-C655D ~/workspace/ACT/tp2 $ time ./divide 1 < ex1.dat
+distance_log = 2
+
+real	0m0.007s
+user	0m0.001s
+sys	0m0.005s
+
+salla@salla-Satellite-C655D ~/workspace/ACT/tp2 $ time ./divide 0 < ex1.dat
+distance_quadra = 2
+
+real	0m0.007s
+user	0m0.001s
+sys	0m0.005s
+
+--------------------------------- ex2.dat ---------------------------------
+
+salla@salla-Satellite-C655D ~/workspace/ACT/tp2 $ time ./divide 1 < ex2.dat
+distance_log = 25
+
+real	0m0.006s
+user	0m0.001s
+sys	0m0.005s
+
+salla@salla-Satellite-C655D ~/workspace/ACT/tp2 $ time ./divide 0 < ex2.dat
+distance_quadra = 25
+
+real	0m0.006s
+user	0m0.001s
+sys	0m0.005s
+
+--------------------------------- ex3.dat ---------------------------------
+
+salla@salla-Satellite-C655D ~/workspace/ACT/tp2 $ time ./divide 1 < ex3.dat
+distance_log = 2239
+
+real	0m0.008s
+user	0m0.002s
+sys	0m0.006s
+
+salla@salla-Satellite-C655D ~/workspace/ACT/tp2 $ time ./divide 0 < ex3.dat
+distance_quadra = 2239
+
+real	0m0.006s
+user	0m0.001s
+sys	0m0.005s
+
+--------------------------------- ex4.dat ---------------------------------
+
+salla@salla-Satellite-C655D ~/workspace/ACT/tp2 $ time ./divide 1 < ex4.dat
+distance_log = 249821
+
+real	0m0.009s
+user	0m0.002s
+sys	0m0.004s
+
+salla@salla-Satellite-C655D ~/workspace/ACT/tp2 $ time ./divide 0 < ex4.dat
+distance_quadra = 249821
+
+real	0m0.017s
+user	0m0.011s
+sys	0m0.006s
+
+--------------------------------- ex5.dat ---------------------------------
+
+salla@salla-Satellite-C655D ~/workspace/ACT/tp2 $ time ./divide 1 < ex5.dat
+distance_log = 24857270
+
+real	0m0.027s
+user	0m0.018s
+sys	0m0.005s
+
+salla@salla-Satellite-C655D ~/workspace/ACT/tp2 $ time ./divide 0 < ex5.dat
+distance_quadra = 24857270
+
+real	0m0.786s
+user	0m0.772s
+sys	0m0.008s
+
+--------------------------------- ex6.dat ---------------------------------
+
+salla@salla-Satellite-C655D ~/workspace/ACT/tp2 $ time ./divide 1 < ex6.dat
+distance_log = 2499209222
+
+real	0m0.197s
+user	0m0.181s
+sys	0m0.013s
+
+salla@salla-Satellite-C655D ~/workspace/ACT/tp2 $ time ./divide 0 < ex6.dat
+distance_quadra = 2499209222
+
+real	1m16.717s
+user	1m14.573s
+sys	0m0.679s
+
+--------------------------------- ex7.dat ---------------------------------
+
+salla@salla-Satellite-C655D ~/workspace/ACT/tp2 $ time ./divide 1 < ex7.dat
+distance_log = 249860953907
+
+real	0m2.134s
+user	0m2.045s
+sys	0m0.057s
+
+salla@salla-Satellite-C655D ~/workspace/ACT/tp2 $ time ./divide 1 < ex7.dat
+distance_log = 249860953907
+
+real	52m26.752s
+user	52m20.005s
+sys	0m0.917s
+
+La méthode en n log n est plus rapide à partir de tableaux de taille 1000.
